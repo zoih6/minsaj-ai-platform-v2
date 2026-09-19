@@ -160,6 +160,16 @@ export function AppShell({ children, locale }: { children: ReactNode; locale: Lo
   const alternateLocale: Locale = isArabic ? "en" : "ar";
 
   /* ------------------------------------------------------------------
+     MIDS-v3 §4 — IMMERSIVE ROUTES
+     Routes whose content owns the bottom band (chat composer) never
+     share it with the fixed bottom nav: the nav hides and returns its
+     reserved space. Measured defect this cures: composer fully
+     occluded by all 5 nav links (69×49px overlap at 360/390/414px).
+     ------------------------------------------------------------------ */
+  const immersiveRoute = pathname.startsWith(`${base}/chat`);
+  const chrome = immersiveRoute ? "immersive" : "full";
+
+  /* ------------------------------------------------------------------
      Sidebar state machine — one source of truth shared with shell.css
        mobile  → "drawer"   (off-canvas + overlay + bottom tab bar)
        tablet  → overlayOpen ? "expanded"(overlay) : "rail"
@@ -261,7 +271,7 @@ export function AppShell({ children, locale }: { children: ReactNode; locale: Lo
 
   return (
     <Dialog.Root open={commandOpen} onOpenChange={setCommandOpen}>
-      <div className="universal-app-shell" data-sidebar={sidebarMode} data-overlay={isOverlay ? "true" : "false"} data-mobile-open={mobileOpen}>
+      <div className="universal-app-shell" data-sidebar={sidebarMode} data-overlay={isOverlay ? "true" : "false"} data-mobile-open={mobileOpen} data-chrome={chrome}>
         <a className="skip-link" href="#main-content">{isArabic ? "انتقل إلى المحتوى" : "Skip to content"}</a>
 
         <button type="button" className="universal-shell-backdrop" data-state={sidebarOpen ? "open" : "closed"} onClick={() => { setMobileOpen(false); setOverlayOpen(false); }} aria-label={labels.close} aria-hidden={!sidebarOpen} tabIndex={sidebarOpen ? 0 : -1} />
@@ -306,7 +316,7 @@ export function AppShell({ children, locale }: { children: ReactNode; locale: Lo
           <main id="main-content" className="universal-shell-content"><div className="universal-route-frame mj-flow" key={pathname}>{children}</div></main>
         </div>
 
-        <nav className="universal-shell-mobile-nav" aria-label={isArabic ? "التنقل على الهاتف" : "Mobile navigation"}>
+        <nav className="universal-shell-mobile-nav" aria-label={isArabic ? "التنقل على الهاتف" : "Mobile navigation"} hidden={immersiveRoute}>
           {[primaryItems[0], primaryItems[1], primaryItems[4], primaryItems[7], utilityItems[0]].map((item) => { const Icon = item.icon; return <Link href={item.href} className={isActive(item.href) ? "is-active" : ""} aria-current={isActive(item.href) ? "page" : undefined} key={item.id}><Icon size={18} /><span>{item.label}</span></Link>; })}
         </nav>
       </div>

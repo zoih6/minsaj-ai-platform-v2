@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://polypane.app",
+    "name": "Using safe-area-inset to build mobile-safe layouts",
+    "snippet": "May 5, 2026 — If you set padding to just the safe - area - inset value, your content will sit right up against the edge of the safe area , which is right up ...",
+    "host_name": "polypane.app",
+    "rank": 0,
+    "date": "May 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.webmasterworld.com",
+    "name": "`safe-area-inset-bottom` without `viewport-fit=cover`?",
+    "snippet": "Oct 24, 2023 — If you use ` viewport - fit = cover `, then these automatic spacers are gone and the page loads full width to the screen, rendering beneath the ... Read more",
+    "host_name": "www.webmasterworld.com",
+    "rank": 1,
+    "date": "Oct 24, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://developer.mozilla.org",
+    "name": "env() CSS function - MDN Web Docs - Mozilla",
+    "snippet": "8 days ago — While the safe - area - inset -* values change as the currently-visible content area changes, the safe-area-max-inset-* values are constants. Read more",
+    "host_name": "developer.mozilla.org",
+    "rank": 2,
+    "date": "Sep 11, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.framer.community",
+    "name": "“The Notch” and CSS - Framer Community",
+    "snippet": "Safari respects the safe areas by default , it's only when you add viewport-fit=cover that you're saying \"ignore the safe areas, I've got it!\". Read more",
+    "host_name": "www.framer.community",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://ruoyusun.com",
+    "name": "A Guide To Full Screen WebView And Notch / Cutout",
+    "snippet": "Oct 21, 2020 — Then you need to add viewport - fit = cover your viewport meta tag. And then your safe - area - inset -* CSS environment variables will be correctly set. Read more",
+    "host_name": "ruoyusun.com",
+    "rank": 4,
+    "date": "Oct 21, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://youtrack.jetbrains.com",
+    "name": "[Web] Mobile. Safari. Unwanted paddings Wasm",
+    "snippet": "The Compose canvas should fill the entire viewport, extending into the safe areas ( notch , home indicator) when viewport - fit = cover is set, similar to how native ... Read more",
+    "host_name": "youtrack.jetbrains.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

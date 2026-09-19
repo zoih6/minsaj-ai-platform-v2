@@ -51,7 +51,7 @@
 
 .u2-workbench__controls { margin-block-start: 14px; display: grid; gap: var(--mj-gap-xs); }
 .u2-start { display: flex; align-items: center; gap: var(--mj-gap-xs); flex-wrap: wrap; }
-.u2-start__button { min-height: var(--u-touch); padding-inline: 16px; display: inline-flex; align-items: center; gap: var(--mj-gap-xs); border: 0; border-radius: var(--u-radius-sm); color: white; background: var(--u-primary); font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
+.u2-start__button { min-height: var(--u-touch); padding-inline: 16px; display: inline-flex; align-items: center; gap: var(--mj-gap-xs); border: 0; border-radius: var(--u-radius-sm); color: white; background: var(--u-primary-solid); font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
 .u2-start__button:disabled { opacity: .65; cursor: progress; }
 .u2-start small { color: var(--u-muted); font-size: var(--u-text-xs); }
 .u2-run { display: flex; flex-wrap: wrap; align-items: center; gap: var(--mj-gap-xs); padding: 9px 11px; border: 1px solid var(--u-line); border-radius: var(--u-radius-sm); background: var(--u-surface-solid); }
@@ -81,7 +81,7 @@
 .u2-overlay__head button { min-width: var(--u-touch); min-height: var(--u-touch); display: grid; place-items: center; border: 1px solid var(--u-line); border-radius: var(--u-radius-sm); color: var(--u-muted); background: var(--u-surface-solid); cursor: pointer; }
 .u2-overlay__body { margin-block-start: 12px; display: grid; gap: var(--mj-gap-sm); font-size: var(--u-text-sm); color: var(--u-ink-soft); }
 .u2-overlay__meta { margin: 0; color: var(--u-muted); font-size: var(--u-text-xs); }
-.u2-overlay__action { min-height: var(--u-touch); width: fit-content; padding-inline: 14px; border: 0; border-radius: var(--u-radius-sm); color: white; background: var(--u-primary); font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
+.u2-overlay__action { min-height: var(--u-touch); width: fit-content; padding-inline: 14px; border: 0; border-radius: var(--u-radius-sm); color: white; background: var(--u-primary-solid); font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
 .u2-overlay__action:disabled { opacity: .6; cursor: not-allowed; }
 .u2-receipt__mode { margin: 0; padding: 9px 11px; border-radius: var(--u-radius-sm); color: var(--u-mint-ink); background: var(--u-mint-soft); font-weight: 500; }
 .u2-receipt__meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--mj-gap-xs); margin: 0; }
@@ -166,7 +166,7 @@
 .u2-learn__actions { display: flex; flex-wrap: wrap; gap: var(--mj-gap-xs); }
 .u2-learn__actions button { min-height: var(--u-touch); padding-inline: 14px; display: inline-flex; align-items: center; gap: var(--mj-gap-xs); border: 1px solid var(--u-line-strong); border-radius: var(--u-radius-sm); color: var(--u-ink-soft); background: var(--u-surface-solid); font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
 .u2-learn__actions button:disabled { opacity: .55; cursor: not-allowed; }
-.u2-learn__primary { border-color: transparent !important; color: white !important; background: var(--u-primary) !important; }
+.u2-learn__primary { border-color: transparent !important; color: white !important; background: var(--u-primary-solid) !important; }
 .u2-learn__modules { display: grid; gap: var(--mj-gap-xs); margin: 0; padding: 0; list-style: none; }
 .u2-learn__modules li { position: relative; display: flex; flex-wrap: wrap; gap: var(--mj-gap-sm); justify-content: space-between; padding: 12px; border: 1px solid var(--u-line); border-radius: var(--u-radius); background: var(--u-surface-solid); }
 /* Skipped modules keep full contrast: the state is carried by the border and
@@ -249,7 +249,7 @@
 .u2-research__actions { display: flex; flex-wrap: wrap; gap: var(--mj-gap-xs); }
 .u2-research__actions button { min-height: var(--u-touch); padding-inline: 14px; display: inline-flex; align-items: center; gap: var(--mj-gap-xs); border: 1px solid var(--u-line-strong); border-radius: var(--u-radius-sm); color: var(--u-ink-soft); background: var(--u-surface-solid); font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
 .u2-research__actions button:disabled { opacity: .55; cursor: not-allowed; }
-.u2-research__primary { border-color: transparent !important; color: white !important; background: var(--u-primary) !important; }
+.u2-research__primary { border-color: transparent !important; color: white !important; background: var(--u-primary-solid) !important; }
 .u2-research__axes { display: grid; gap: var(--mj-gap-xs); margin: 0; padding: 0; list-style: none; }
 .u2-research__axes li { display: flex; flex-wrap: wrap; gap: var(--mj-gap-sm); justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--u-line); border-radius: var(--u-radius); background: var(--u-surface-solid); }
 .u2-research__axes li[data-included="false"] { border-style: dashed; background: var(--u-tint-1); }
@@ -386,7 +386,7 @@
 .u2-create__actions { display: flex; flex-wrap: wrap; gap: var(--mj-gap-xs); }
 .u2-create__actions button { min-height: var(--u-touch); padding-inline: 14px; display: inline-flex; align-items: center; gap: var(--mj-gap-xs); border: 1px solid var(--u-line-strong); border-radius: var(--u-radius-sm); color: var(--u-ink-soft); background: var(--u-surface-solid); font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
 .u2-create__actions button:disabled { opacity: .55; cursor: not-allowed; }
-.u2-create__primary { border-color: transparent !important; color: white !important; background: var(--u-primary) !important; }
+.u2-create__primary { border-color: transparent !important; color: white !important; background: var(--u-primary-solid) !important; }
 .u2-create__structure-list { display: grid; gap: var(--mj-gap-xs); margin: 0; padding: 0; list-style: none; }
 .u2-create__structure-list li { display: grid; gap: var(--mj-gap-2xs); padding: 12px; border: 1px solid var(--u-line); border-radius: var(--u-radius); background: var(--u-surface-solid); }
 .u2-create__structure-list strong { font-size: var(--mj-text-body); }

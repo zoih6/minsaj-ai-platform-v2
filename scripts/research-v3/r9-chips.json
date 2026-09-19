@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://developer.mozilla.org",
+    "name": "overflow-x CSS property - MDN Web Docs",
+    "snippet": "Apr 20, 2026 — The overflow - x CSS property sets what shows when content overflows a block-level element's left and right edges. This may be nothing, ...",
+    "host_name": "developer.mozilla.org",
+    "rank": 0,
+    "date": "Apr 20, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://generate.support",
+    "name": "Horizontal Scroll (Overflow-X) on Mobile - GenerateSupport",
+    "snippet": "Aug 3, 2025 — I'd like it to scroll horizontally ( overflow - x : scroll ) on mobile devices to ensure all content remains visible.",
+    "host_name": "generate.support",
+    "rank": 1,
+    "date": "Aug 3, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://jetrockets.com",
+    "name": "CSS Scroll Snap for Mobile-Friendly Horizontal Tabs",
+    "snippet": "Oct 17, 2025 — The scroll - padding - inline property creates an offset zone, so the first tab won't snap directly to the edge but will maintain the specified ... Read more",
+    "host_name": "jetrockets.com",
+    "rank": 2,
+    "date": "Oct 17, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://web.dev",
+    "name": "Building a media scroller component | Articles",
+    "snippet": "May 12, 2021 — A foundational overview of how to build a responsive horizontal scrollview for TVs, phones , desktops, etc.",
+    "host_name": "web.dev",
+    "rank": 3,
+    "date": "May 12, 2021",
+    "favicon": ""
+  },
+  {
+    "url": "https://theplusaddons.com",
+    "name": "CSS Scroll Snap: Properties, Recipes and Traps",
+    "snippet": "Sep 3, 2026 — Scroll snap lets you define positions that a scroll gesture comes to rest on. Accepts two values for block and inline axes. overflow - x : auto ;  ...",
+    "host_name": "theplusaddons.com",
+    "rank": 4,
+    "date": "Sep 3, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://chenhuijing.com",
+    "name": "The horizontal overflow problem",
+    "snippet": "Jul 29, 2022 — A common cause is having items in your layout that are fixed width or have some min-width value that ends up larger than your viewport width at ... Read more",
+    "host_name": "chenhuijing.com",
+    "rank": 5,
+    "date": "Jul 29, 2022",
+    "favicon": ""
+  }
+]

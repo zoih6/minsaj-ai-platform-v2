@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "سليم",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789860567,
+  "id": "20260920072926ea0374f1a4bd497c",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20260920072926ea0374f1a4bd497c",
+  "usage": {
+    "completion_tokens": 3,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1021,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1024
+  }
+}

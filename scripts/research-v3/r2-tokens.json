@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://designsystem.digital.gov",
+    "name": "Design tokens | U.S. Web Design System (USWDS)",
+    "snippet": "Introducing design tokens . Anything we see on a website is built from elements of style: color, spacing , typography, line height , and opacity. The CSS rules ... Read more",
+    "host_name": "designsystem.digital.gov",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://nordhealth.design",
+    "name": "Design Tokens",
+    "snippet": "Design tokens are a tech-agnostic way to store variables . Design tokens are a central location to store design related information such as colors, fonts, sizes ...",
+    "host_name": "nordhealth.design",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://24ways.org",
+    "name": "Design Tokens and Component Based Design",
+    "snippet": "Dec 14, 2019 — “ Design Tokens are an abstraction for everything impacting the visual design of an app/platform.” Z Index , Icons – these can all be abstracted ...",
+    "host_name": "24ways.org",
+    "rank": 2,
+    "date": "Dec 14, 2019",
+    "favicon": ""
+  },
+  {
+    "url": "https://designsystem.ny.gov",
+    "name": "Design Tokens - NYS Design System",
+    "snippet": "Aug 13, 2026 — NYSDS tokens are organized in three layers . Each layer serves a different purpose, and understanding them will help you choose the right token ... Read more",
+    "host_name": "designsystem.ny.gov",
+    "rank": 3,
+    "date": "Aug 13, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://panda-css.com",
+    "name": "Tokens",
+    "snippet": "Design tokens are the platform-agnostic way to manage design decisions in your application or website.",
+    "host_name": "panda-css.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://zeroheight.com",
+    "name": "How design tokens work: types, structure and hierarchy",
+    "snippet": "Jun 12, 2026 — Design tokens are organized in three tiers: global, alias, and component. Spacing Spacing tokens define the distances between and around ...",
+    "host_name": "zeroheight.com",
+    "rank": 5,
+    "date": "Jun 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://penpot.app",
+    "name": "The developer's guide to design tokens and CSS variables",
+    "snippet": "Dec 4, 2025 — Design tokens are the smallest indivisible elements of a design system , representing individual design decisions as data. They function as named ... Read more",
+    "host_name": "penpot.app",
+    "rank": 6,
+    "date": "Dec 4, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://cdn-assets.supernova.io",
+    "name": "The State of Design Tokens 2024",
+    "snippet": "Design tokens are the atomic elements of design within a brand. They represent a named value of an agreed-upon entity that both designers and developers can. Read more",
+    "host_name": "cdn-assets.supernova.io",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

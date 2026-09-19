@@ -1,0 +1,365 @@
+/* ==========================================================================
+   مِنسَج IDENTITY & DESIGN SYSTEM — v3 (MIDS-v3)
+   --------------------------------------------------------------------------
+   One file. One truth. Loaded AFTER the legacy layer so its values win.
+
+   CHARTER (derived from documented research, 2026-09-20)
+   --------------------------------------------------------------------
+   C1  CALM IS THE PRODUCT      (Linear)   near-quiet canvases; color is
+                                          punctuation, never decoration.
+   C2  RESTRAINT AS A FEATURE   (Geist)    neutrals first; accent only for
+                                          status, focus, and brand moments.
+   C3  MATH, NOT TASTE          (WCAG 2.2) every text token was COMPUTED to
+                                          pass 4.5:1 (3:1 large) on its
+                                          surface — see palette-verify.py.
+   C4  GEOMETRY BELONGS TO FLOW            nothing floats over content;
+                                          fixed layers RESERVE their space
+                                          or yield it (immersive mode).
+   C5  RTL IS NATIVE, NOT MIRRORED         logical properties only
+                                          (inline-start/end, padding-inline).
+   C6  SPACING IS A SCALE                   4px base; no invented values.
+   C7  ONE Z-LADDER                         documented below; no ad-hoc z.
+   C8  DECORATIONS ARE CAGED                ornaments live inside
+                                          overflow-hidden cages and shrink
+                                          with the viewport.
+
+   Z-LADDER (authoritative)
+     40 topbar            50 bottom-nav      55 drawer backdrop
+     60 sidebar/drawer    70 notifications   90 toast      100+ dialog
+   ========================================================================== */
+
+/* ==========================================================================
+   §1  COLOR TOKEN CORRECTIONS — cascade-level fixes, AA-computed
+   --------------------------------------------------------------------------
+   These REDEFINE legacy token values in place. Every page that references
+   --u-mint / --u-faint / --u-muted instantly inherits the verified values.
+   Values proven by scripts/audit-v3/palette-verify.py (run 2026-09-20).
+   ========================================================================== */
+:root {
+  /* light theme: green as TEXT must be #047857 (5.48:1 on white),
+     the old #0d9f70 measured 3.38:1 — FAIL. */
+  --u-mint: #047857;
+  --u-mint-ink: #065f46;
+
+  /* light theme: faint/muted on TINTED surfaces must clear 4.5:1.
+     old faint #6b7090 measured 4.32:1 on cream tints — FAIL. */
+  --u-faint: #5b6373;   /* 5.50:1 on subtle, 5.69:1 on canvas */
+  --u-muted: #4a5163;   /* 6.90:1 on white */
+
+  /* brand violet — text-safe tiers (light) */
+  --mids-violet-ink: #5b46e0;      /* 5.5:1 on white: brand text on light */
+  /* FILL tier — primary buttons/badges keep white-text contrast
+     (light: identical to brand #4f46e5 = 6.2:1 with white) */
+  --u-primary-solid: #4f46e5;
+}
+
+:root[data-theme="dark"] {
+  /* faint/muted dark-tier recalibration (old #8489a8 = 5.16:1 on raised,
+     nudged for tint safety) */
+  --u-faint: #98a1b3;   /* 6.22:1 on tint-d */
+  --u-muted: #a8b0c2;   /* 7.4:1 on canvas  */
+
+  /* PRIMARY SPLIT (measured defect: #818cf8 on its own 13% tint = 1:1).
+     TEXT tier becomes light indigo → 7.3:1 on the soft tint;
+     FILL tier is a deep indigo → 5.25:1 with white label. */
+  --u-primary: #a5b0fc;
+  --u-primary-solid: #5b5bd6;
+
+  /* brand violet — text-safe tiers (dark) */
+  --mids-violet-ink: #b4aaff;      /* 8.89:1 on surface-d */
+}
+
+/* Legacy `green text on white` usages ride --u-mint; the vivid fill green
+   for badges/icons survives as its own token so chips keep their pop. */
+:root { --mids-green-fill: #0d9f70; }
+:root[data-theme="dark"] { --mids-green-fill: #34d399; }
+
+/* ==========================================================================
+   §2  SPACING / RHYTHM / Z-LADDER — the MIDS namespace
+   ========================================================================== */
+:root {
+  --mids-1: 4px;   --mids-2: 8px;   --mids-3: 12px; --mids-4: 16px;
+  --mids-5: 20px;  --mids-6: 24px;  --mids-8: 32px; --mids-10: 40px;
+  --mids-12: 48px; --mids-16: 64px;
+
+  /* page gutters — content never kisses the screen edge */
+  --mids-gutter: 16px;             /* phones */
+  --mids-nav-h: 64px;              /* bottom nav height (excl. safe-area) */
+  --mids-topbar-h: 56px;
+
+  /* documented ladder (charter C7) */
+  --mids-z-topbar: 40;
+  --mids-z-bottomnav: 50;
+  --mids-z-backdrop: 55;
+  --mids-z-drawer: 60;
+  --mids-z-notify: 70;
+  --mids-z-toast: 90;
+
+  /* motion — one family */
+  --mids-ease: cubic-bezier(.22, .61, .36, 1);
+  --mids-fast: 140ms;
+  --mids-med: 240ms;
+}
+@media (min-width: 768px) { :root { --mids-gutter: 24px; } }
+@media (min-width: 1280px) { :root { --mids-gutter: 32px; } }
+
+/* ==========================================================================
+   §3  CHIP RAIL v3 — the horizontal filter rail, RTL-correct
+   --------------------------------------------------------------------------
+   Defects fixed (measured 2026-09-20, 360/390/414px):
+   · chips scrolled to negative offsets (down to -33px) — no scroll padding
+   · first/last chips kissed the container edge — no breathing room
+   · hard-cut mid-letter chips at the rail end on load (RTL)
+   DECISION (Material / Setproduct research): filter rails with a handful
+   of chips WRAP on phones — zero cut text, zero hidden affordance. Long
+   rails keep scrolling but fade at the edge (§6d).
+   ========================================================================== */
+.mj-control-bar__group {
+  /* breathing room INSIDE the scrollport: chips never kiss the edges */
+  padding-inline: 2px;
+  scroll-padding-inline-start: 2px;
+  scroll-padding-inline-end: 2px;
+}
+@media (max-width: 767.98px) {
+  /* phones: few chips → wrap into a clean 2-row rhythm, never cut text */
+  .mj-control-bar__group {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    row-gap: 6px;
+    scroll-snap-type: none;
+  }
+  .mj-control-bar__group > * { scroll-snap-align: none; }
+  /* the toolbar box that hosts the rail: kill the phantom vertical air
+     the legacy layer injected (measured 64px above + 121px between rows) */
+  .library-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    align-items: start;
+    gap: var(--mids-2);
+    padding: var(--mids-2);
+    margin-block-end: var(--mids-4);
+  }
+  .library-search { margin-block: 0; }
+}
+
+/* focus ring must not be clipped by the rail's hidden scrollbar */
+.mj-control-bar__group:focus-visible {
+  outline: 2px solid var(--mids-violet-ink, #5b46e0);
+  outline-offset: 2px;
+  border-radius: var(--u-radius-pill, 999px);
+}
+
+/* ==========================================================================
+   §3b  FIRST-SCREEN RHYTHM (phones) — density with air, not congestion
+   --------------------------------------------------------------------------
+   Measured on runs @360px: header 170px + stats 176px pushed the primary
+   toolbar under the nav band (chips top:778 vs nav top:753). Premium
+   mobile headers are 60-90px (Linear/Vercel pattern). We compact the
+   rhythm so the toolbar lands in the first screen, fully visible.
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .page-header {
+    gap: var(--mids-2);
+    margin-block-end: var(--mids-4);
+  }
+  .page-header h1 { margin-block: 0; }
+  .ops-stats {
+    margin-block-end: var(--mids-4);
+    gap: 1px;
+  }
+  .ops-stats > div { padding: 10px 12px; }
+  .ops-stats dd { font-size: 22px; }
+  /* settings first screen: the third field straddled the nav edge
+     (measured: field bottom 765 vs nav top 753) — reclaim ~25px from
+     pure spacing (grid gaps + section head), never from content */
+  .settings-layout { gap: 10px; }
+  .settings-section { padding: 14px; }
+  .settings-section__head { margin-block-end: 12px; padding-block-end: 10px; }
+  .settings-section__head p { margin-block-start: 4px; }
+  .profile-settings-grid { gap: 12px; }
+  .profile-settings-grid > div { display: grid; row-gap: 8px; align-content: start; }
+  .field { margin: 0; }
+  .page-description { line-height: 1.55; }
+  .settings-nav { margin-block-end: 0; }
+}
+
+/* ==========================================================================
+   §4  BOTTOM NAV v3 — opaque, integrated, yields for immersive routes
+   --------------------------------------------------------------------------
+   Defects fixed (measured):
+   · glass background let content bleed through behind the nav (visual
+     "floating buttons over text" effect users photographed);
+   · nav rendered on chat where the composer lives at the bottom — the
+     composer was fully occluded (textarea × nav = 69×49px overlap).
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .universal-shell-mobile-nav {
+    /* OPAQUE surface (charter C4: fixed layers own their band fully) */
+    background: var(--u-surface-solid, #11141b);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 -1px 0 var(--u-line);
+  }
+  /* premium edge: content that scrolls into the band FADES out above the
+     nav (iOS tab-bar pattern) instead of hard-cutting at the hairline.
+     Any element straddling the edge now reads as gracefully receding. */
+  .universal-shell-mobile-nav::before {
+    content: "";
+    position: absolute;
+    inset-block-end: 100%;
+    inset-inline: 0;
+    height: 18px;
+    background: linear-gradient(to bottom, transparent, var(--u-surface-solid, #11141b));
+    pointer-events: none;
+  }
+  .universal-shell-mobile-nav a {
+    transition: color var(--mids-fast) var(--mids-ease);
+  }
+  /* ACTIVE STATE — integrated, not a floating button (charter C1):
+     tinted pill hugging the row, icon+label share the accent. */
+  .universal-shell-mobile-nav a.is-active {
+    position: relative;
+    color: var(--u-primary);
+  }
+  .universal-shell-mobile-nav a.is-active::before {
+    content: "";
+    position: absolute;
+    inset-inline: 18%;
+    inset-block-start: 6px;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--u-primary);
+  }
+}
+
+/* ---- IMMERSIVE MODE (chat & full-bleed workspaces) ------------------
+   The shell sets [data-chrome="immersive"] on routes whose content owns
+   the bottom band (the composer). The nav disappears and the reserve it
+   held is returned to the content — same pattern as ChatGPT/WhatsApp. */
+.universal-app-shell[data-chrome="immersive"] .universal-shell-mobile-nav { display: none; }
+@media (max-width: 767.98px) {
+  :root { --mj-tabbar-reserve: calc(var(--mids-nav-h, 64px) + max(7px, env(safe-area-inset-bottom))); }
+  .universal-app-shell[data-chrome="immersive"] ~ * ,
+  .universal-app-shell[data-chrome="immersive"] { --mj-tabbar-reserve: 0px; }
+  .universal-app-shell[data-chrome="immersive"] .universal-shell-content {
+    padding-block-end: 0;
+  }
+}
+
+/* ==========================================================================
+   §5  CONTRAST SURGERY — targeted selectors that bypassed the tokens
+   ========================================================================== */
+
+/* ops stat details sat faint-on-cream at 4.32:1 — ride the fixed token */
+.ops-stats .ops-stat-detail { color: var(--u-muted); }
+
+/* landing hero gradient text: transparent fill has no guarantee when
+   background-clip fails or graded stops dip. Ship a solid AA fallback
+   (violet-300 = 9.38:1 on the dark hero canvas), keep the gradient
+   as progressive enhancement on top. */
+.universal-hero__copy h1 span {
+  color: var(--mids-violet-ink, #b4aaff);
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .universal-hero__copy h1 span {
+    color: transparent;
+    background: var(--u-hero-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+/* service card sample text on tinted glass measured 1.92–2.92:1.
+   The marketing site is an always-dark scope (universal-site tokens),
+   independent of data-theme. Premium fix: solid quiet "quote chip" —
+   the service hue mixed INTO a deep base so ink text passes AA. */
+.universal-site .universal-service-card__sample {
+  background: color-mix(in srgb, rgb(var(--service-rgb)) 14%, #131722);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.universal-service-card__sample { color: var(--u-ink); }
+
+/* hero mode strip active tab: raw service hue on raise = 3.37:1;
+   the deep variant clears 6.6:1 while keeping the tab's identity. */
+.universal-mode-strip button.is-active { color: var(--service-deep, var(--u-ink)); }
+
+/* service name labels sit on glass cards — the raw service hue measured
+   3.37:1 in dark; ink-soft clears AA on glass in both themes. */
+.universal-service-card__tag,
+.universal-service-card__head span,
+.universal-site .universal-chip {
+  color: var(--u-ink-soft);
+}
+
+/* ==========================================================================
+   §6  DECORATION GUARDS — ornaments are caged (charter C8)
+   --------------------------------------------------------------------------
+   Measured: hero glows 720–798px wide and orbits 384–407px wide on a
+   375px viewport; they escaped their parents by 47–58px. Guards below
+   cage every decorative layer inside an overflow-hidden boundary and
+   clamp their size on phones.
+   ========================================================================== */
+
+/* 6a. the hero visual becomes the cage */
+.universal-hero__visual {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+/* 6b. glows/orbits are confined to the cage and scale down on phones */
+.universal-hero__glow { max-width: 160vw; max-height: 160vw; }
+.universal-orbit { max-width: 120%; max-height: 120%; }
+@media (max-width: 767.98px) {
+  .universal-hero__glow--one,
+  .universal-hero__glow--two { width: min(90vw, 480px); height: min(90vw, 480px); }
+  .universal-hero__glow--one { inset-inline-start: -30vw; }
+  .universal-hero__glow--two { inset-inline-end: -30vw; }
+  /* cage the home hero so ornaments never widen the document */
+  .adaptive-home { overflow-x: clip; }
+}
+
+/* 6c. settings page — the section rail (6 destinations, too many to wrap)
+   keeps scrolling on phones: fade the overflow edge instead of cutting
+   mid-letter, keep snap, add scroll breathing room. Scoped to the
+   horizontal mode only (container <880px) so the desktop sidebar is
+   untouched. */
+@container ops-page (max-width: 880px) {
+  .settings-nav {
+    scroll-padding-inline-start: 4px;
+    -webkit-mask-image: linear-gradient(to left, #000 0, #000 calc(100% - 28px), transparent 100%);
+    mask-image: linear-gradient(to left, #000 0, #000 calc(100% - 28px), transparent 100%);
+  }
+  [dir="ltr"] .settings-nav {
+    -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
+    mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
+  }
+}
+
+/* 6d. home ambient orb — 440px on a 360px viewport. As a caged ornament
+   it may bleed, but on phones it dominated the first screen. Shrink to
+   a tasteful accent that still bleeds slightly past the corner. */
+@media (max-width: 767.98px) {
+  .adaptive-home__ambient--one,
+  .adaptive-home__ambient--two {
+    width: 300px; height: 300px;
+  }
+  .adaptive-home__ambient--one { inset-inline-end: -90px; inset-block-start: -150px; }
+}
+
+/* ==========================================================================
+   §7  PRESS RHYTHM — active/pressed feedback unified (charter C1)
+   ========================================================================== */
+.universal-shell-mobile-nav a:active,
+.mj-chip:active,
+button:active:not([class*="toggle"]) { transform: none; }
+.universal-shell-mobile-nav a:active { background: var(--u-primary-soft); }
+
+/* ==========================================================================
+   §8  FOCUS VISIBLE — one ring to rule them all (a11y)
+   ========================================================================== */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--mids-violet-ink, #5b46e0);
+  outline-offset: 2px;
+  border-radius: 6px;
+}

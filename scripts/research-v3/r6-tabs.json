@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://m2.material.io/components/bottom-navigation",
+    "name": "Bottom navigation - Material Design",
+    "snippet": "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label.",
+    "host_name": "m2.material.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/Android/comments/4ag5jw/material_design_spec_updated_with_new_guidance",
+    "name": "Material Design spec updated with new guidance for bottom  - Reddit",
+    "snippet": "Mar 15, 2016 · The guidelines specifically advise not to use tabs and bottom navigation simultaneously, Google+ developers. Phone uses bottom for app actions, ... Bottom Navigation behavior changes in Material Design 2 Material Design - Tabs and Bottom Navigation : r/androiddev More results from www.reddit.com",
+    "host_name": "www.reddit.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.mercury.io/androids-change-of-heart",
+    "name": "Google adds Bottom Navigation - Mercury Blog",
+    "snippet": "Despite Google's history of advising against bottom navigation, they recently added it to their material design guidelines as a primary navigation pattern.",
+    "host_name": "blog.mercury.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.setproduct.com/blog/tabs-ui-design",
+    "name": "Tab UI design rules: When tabs work and when they fail - Setproduct",
+    "snippet": "Mar 26, 2025 · This guide covers tab anatomy, states, theming and accessible patterns for desktop and mobile UI. Segmented control tabs. Segmented controls in ...",
+    "host_name": "www.setproduct.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=wLJ40GV2XEc",
+    "name": "How to Design a Great Bottom Mobile Navigation Bar - YouTube",
+    "snippet": "Apr 25, 2025 · Currently an UI/UX Designer yet I had past video editing experience as my hobby. By noticing smooth graph transitions, motion graphics ...",
+    "host_name": "www.youtube.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.smashingmagazine.com/2016/11/the-golden-rules-of-mobile-navigation-design",
+    "name": "The Golden Rules Of Bottom Navigation Design - Smashing Magazine",
+    "snippet": "Nov 2, 2016 · Each bottom navigation icon must lead to a target destination, and should not open menus or other pop-ups. Tapping on a bottom navigation icon ...",
+    "host_name": "www.smashingmagazine.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://design.va.gov/components/button/button-segmented",
+    "name": "Button - Segmented - VA.gov Design System",
+    "snippet": "May 14, 2026 · A segmented control consists of a horizontal set of 2-4 segments, each of which functions as a button. One option is always selected. The ...",
+    "host_name": "design.va.gov",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://vanillaframework.io/docs/patterns/segmented-control/design-guidelines",
+    "name": "Segmented control | Components | Vanilla documentation",
+    "snippet": "This document aims to give some context on when to use a segmented button v. the traditional tabs, and what are the variants of this component. Considerations.",
+    "host_name": "vanillaframework.io",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

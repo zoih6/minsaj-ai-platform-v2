@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://simplelocalize.io",
+    "name": "RTL design guide for developers: Bidirectional layout done",
+    "snippet": "Apr 7, 2026 — A practical RTL design guide for developers. Learn how to implement right-to-left layouts for Arabic , Hebrew, and Persian, with real CSS ...",
+    "host_name": "simplelocalize.io",
+    "rank": 0,
+    "date": "Apr 7, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://aivensoft.com",
+    "name": "RTL Arabic Website Design Best Practices",
+    "snippet": "Jan 19, 2026 — This guide provides a comprehensive, technically detailed approach to building RTL Arabic websites that feel native, performant, and user- ...",
+    "host_name": "aivensoft.com",
+    "rank": 1,
+    "date": "Jan 19, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://hacks.mozilla.org",
+    "name": "Building RTL-Aware Web Apps & Websites: Part 2",
+    "snippet": "Oct 7, 2015 — In this second post we will cover how-tos for bidirectional (BIDI) user interfaces. The core of RTL UI design and development on the Web is ...",
+    "host_name": "hacks.mozilla.org",
+    "rank": 2,
+    "date": "Oct 7, 2015",
+    "favicon": ""
+  },
+  {
+    "url": "https://mobytechy.com",
+    "name": "Arabic RTL UX Design: Common Problems and Practical",
+    "snippet": "Jul 26, 2026 — Arabic RTL UX Design: Common Problems and Practical Solutions · 1. Treat RTL as a complete system · 2. Set document and component direction ... Read more",
+    "host_name": "mobytechy.com",
+    "rank": 3,
+    "date": "Jul 26, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://css-tricks.com",
+    "name": "Building Multi-Directional Layouts",
+    "snippet": "Jan 23, 2020 — This article is about CSS logical properties and values. It starts with declaring the dir attribute on the HTML tag. flexbox follow a similar ...",
+    "host_name": "css-tricks.com",
+    "rank": 4,
+    "date": "Jan 23, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://rtlstyling.com",
+    "name": "Right-to-left Styling",
+    "snippet": "An extensive guide on how to style for RTL in CSS. ltr is the default value for the dir (or “ direction ”) property . I advise you to use CSS logical properties ...",
+    "host_name": "rtlstyling.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.w3.org",
+    "name": "Structural markup and right-to-left text in HTML",
+    "snippet": "Jun 25, 2021 — Using logical properties in CSS ... Text that is aligned to the right in an English page generally needs to be aligned to the left in a RTL page. Read more",
+    "host_name": "www.w3.org",
+    "rank": 6,
+    "date": "Jun 25, 2021",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://vercel.com",
+    "name": "Geist",
+    "snippet": "Geist Design System. Vercel design system for building consistent web experiences. Brand Assets. Learn how to work with our brand assets. Read more",
+    "host_name": "vercel.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.designsystems.one",
+    "name": "Vercel Geist Design System | DesignSystems.one",
+    "snippet": "Restraint as a feature — the system rarely uses color outside neutrals, treats accent like punctuation, and gets out of the way of code samples and dashboards. Read more",
+    "host_name": "www.designsystems.one",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://explainx.ai",
+    "name": "Vercel — DESIGN.md",
+    "snippet": "May 4, 2026 — Vercel's website is the visual thesis of developer infrastructure made invisible — a design system so restrained it borders on philosophical. Read more",
+    "host_name": "explainx.ai",
+    "rank": 2,
+    "date": "May 4, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://designsystems.surf",
+    "name": "Vercel Framework - Geist Design System",
+    "snippet": "Geist Design System serves as a comprehensive framework for creating cohesive and uniform web experiences across Vercel products, include brand guidelines",
+    "host_name": "designsystems.surf",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://lobehub.com",
+    "name": "vercel-geist-design-system | Skills ..",
+    "snippet": "Sep 2, 2026 — The target feel is a restrained developer-tool interface : Neutral-first, high-contrast, accessible surfaces. Color is functional: status, focus ...",
+    "host_name": "lobehub.com",
+    "rank": 4,
+    "date": "Sep 2, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://oh-my-design.kr",
+    "name": "Vercel Design System — Colors, Typography & Tokens",
+    "snippet": "Vercel is a developer platform . Do Use the exact current neutral hierarchy and #ebebeb grid logic. Preserve Geist's observed negative tracking and moderate ...",
+    "host_name": "oh-my-design.kr",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.shadcn.io",
+    "name": "Vercel Design System for React — Ink #171717, Geist",
+    "snippet": "May 12, 2026 — Vercel's design language is the dashboard marketing surface for a developer platform, written for engineers who already know the syntax. Read more",
+    "host_name": "www.shadcn.io",
+    "rank": 6,
+    "date": "May 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.figma.com",
+    "name": "Geist Design System - Vercel",
+    "snippet": "Geist is the Vercel's Design System . According to Geist's description: \"Vercel design system for building consistent web experiences.\".",
+    "host_name": "www.figma.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.figma.com",
+    "name": "7 Key UI Design Principles + How To Use Them",
+    "snippet": "Thoughtful spacing between elements creates visual interest and shows users how different UI elements are related.",
+    "host_name": "www.figma.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.nngroup.com",
+    "name": "Why Does a Design Look Good?",
+    "snippet": "Mar 7, 2021 — Visually aesthetic designs use consistent typography , establish a clear hierarchy, utilize a refined color palette, and align to a grid.",
+    "host_name": "www.nngroup.com",
+    "rank": 1,
+    "date": "Mar 7, 2021",
+    "favicon": ""
+  },
+  {
+    "url": "https://linear.app",
+    "name": "How we redesigned the Linear UI (part Ⅱ)",
+    "snippet": "Mar 28, 2024 — We've adjusted the sidebar, tabs, headers, and panels to reduce visual noise, maintain visual alignment, and increase the hierarchy and density ... Read more",
+    "host_name": "linear.app",
+    "rank": 2,
+    "date": "Mar 28, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.muz.li",
+    "name": "7 tiny UI fixes that can make any product look premium",
+    "snippet": "Nov 21, 2025 — Use a grid system to design . Use proper alignment, be it left, center or right justified. Use consistent padding throughout the design. Your UI ... Read more",
+    "host_name": "medium.muz.li",
+    "rank": 3,
+    "date": "Nov 21, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://open-design.ai",
+    "name": "Linear design system — palette, typography & tokens for",
+    "snippet": "Visual Theme & Atmosphere. Linear's website is a masterclass in dark-mode-first product design — a near-black canvas ( #08090a ) where content emerges from ... Read more",
+    "host_name": "open-design.ai",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

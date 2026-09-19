@@ -7,6 +7,7 @@ import "@fontsource/inter/700.css";
 import "@fontsource/ibm-plex-mono/400.css";
 import "../globals.css";
 import "../universal.css";
+import "../styles/mids.css";
 import { getDictionary, getDirection, isLocale, locales } from "@minsaj/i18n";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 

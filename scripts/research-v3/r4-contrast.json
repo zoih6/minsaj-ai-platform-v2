@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://venngage.com",
+    "name": "Accessible Color Palette Generator | WCAG Compliant",
+    "snippet": "The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1 . The pairings have sufficient contrast for use with normal text , large text and ... Read more",
+    "host_name": "venngage.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://accessibility.build",
+    "name": "Accessible Color Palette Generator | WCAG 2.2",
+    "snippet": "What contrast ratio does WCAG 2.2 require? ... WCAG 2.2 Level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. Level AAA ... Read more",
+    "host_name": "accessibility.build",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.accessibilitychecker.org",
+    "name": "The Designer's Guide to Dark Mode Accessibility",
+    "snippet": "Jan 6, 2026 — WCAG Level AA requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text, regardless of whether the interface is light or ... Read more",
+    "host_name": "www.accessibilitychecker.org",
+    "rank": 2,
+    "date": "Jan 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://coolors.co",
+    "name": "Color Contrast Checker",
+    "snippet": "The level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text (at least 18pt) or bold text . The level AAA requires a contrast ... Read more",
+    "host_name": "coolors.co",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.allaccessible.org",
+    "name": "Color Contrast Accessibility: Complete WCAG 2025 Guide",
+    "snippet": "Oct 22, 2025 — This comprehensive guide covers everything you need to achieve WCAG 2.2 color contrast compliance, including contrast ratios, testing tools, ... Read more",
+    "host_name": "www.allaccessible.org",
+    "rank": 4,
+    "date": "Oct 22, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://doc.bplogix.com",
+    "name": "Sample Accessible Colors",
+    "snippet": "AA *: Contrast ratio > 3:1 for 18pt or larger text . AAA: Contrast ratio > 7:1. AAA*: Contrast ratio > 4.5:1 for 18pt or larger text . Suggested Colors ... Read more",
+    "host_name": "doc.bplogix.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://webaim.org",
+    "name": "Understanding WCAG 2 Contrast and Color Requirements",
+    "snippet": "Jan 9, 2021 — It requires 7:1 contrast for normal text and 4.5:1 for large text . Although higher contrast is often recommended, Level AA conformance is ... Read more",
+    "host_name": "webaim.org",
+    "rank": 6,
+    "date": "Jan 9, 2021",
+    "favicon": ""
+  }
+]

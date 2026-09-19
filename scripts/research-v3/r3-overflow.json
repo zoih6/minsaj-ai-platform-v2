@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://forum.bricksbuilder.io",
+    "name": "Horizontal Scroll on Mobile with Sticky Header - Bugs",
+    "snippet": "Feb 22, 2023 — When the header scroll function is active it applies the “ sticky ” value, which then creates a horizontal scroll . If you changed it to fixed , ... Read more",
+    "host_name": "forum.bricksbuilder.io",
+    "rank": 0,
+    "date": "Feb 22, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to",
+    "name": "Stop Using Fixed Headers and Start Using Sticky Ones",
+    "snippet": "Jun 25, 2020 — By using position : fixed on an element like the header , the element is removed from the stack and positioned relative to the browser window. Read more",
+    "host_name": "dev.to",
+    "rank": 1,
+    "date": "Jun 25, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.freecodecamp.org",
+    "name": "Fixing Sticky Table Header with Horizontal Scroll in a",
+    "snippet": "Feb 18, 2025 — The header stays sticky at the top when scrolling vertically. However, when I set overflow - x : auto on the .content container to allow horizontal ... Read more",
+    "host_name": "forum.freecodecamp.org",
+    "rank": 2,
+    "date": "Feb 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.shopify.com",
+    "name": "Sticky/Back on scroll Header not working on mobile",
+    "snippet": "Dec 15, 2025 — On mobile , the sticky header isn't actually sticky. It stays at the very top and doesn't come back when scrolling . I'm using a back-on- scroll ... Read more",
+    "host_name": "community.shopify.com",
+    "rank": 3,
+    "date": "Dec 15, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.taniarascia.com",
+    "name": "HTML Tables with Horizontal Scroll and Sticky Headers",
+    "snippet": "Oct 9, 2024 — You can do this by wrapping the table in a div that has overflow - x set to auto . Note: I prefer to use overflow - x : auto instead of overflow - x : ... Read more",
+    "host_name": "www.taniarascia.com",
+    "rank": 4,
+    "date": "Oct 9, 2024",
+    "favicon": ""
+  }
+]
