@@ -165,13 +165,15 @@
 /* ---- §3 Head rhythm --------------------------------------------------- */
 .section-heading { margin-block-end: var(--mj-gap-sm); gap: var(--mj-gap-sm) var(--mj-gap-md); }
 
-/* ---- §4 Arabic script discipline --------------------------------------
-   Tracking (letter-spacing) is a Latin-display device. On connected
-   Arabic script it tears word shapes apart — the glyphs are joined
-   by design. Zero it for every tracked display/label class. */
-[dir="rtl"] .page-title,
-[dir="rtl"] .page-eyebrow,
-[dir="rtl"] .section-kicker,
-[dir="rtl"] .section-heading__eyebrow,
-[dir="rtl"] .mj-section__label { letter-spacing: 0; }
+/* ---- §4 Arabic script law (v23 — replaces the ineffective v21 scoped rule)
+   Tracking (letter-spacing) is a Latin-display device. On connected Arabic
+   script it tears word shapes apart — glyphs are joined by design. The old
+   rule covered 5 classes and lost to the !important accent declarations;
+   measured live: hero -2.52px, eyebrow +0.27px still applying on Arabic.
+   THE LAW: on Arabic pages letter-spacing is zero for EVERYTHING except
+   explicit LTR islands (.ltr-value, .mono, [dir="ltr"], code, kbd, samp, pre).
+   Latin pages (html[lang="en"]) keep their tracking untouched. */
+html[lang="ar"] body *:not(.ltr-value):not(.mono):not([dir="ltr"]):not(code):not(kbd):not(samp):not(pre) {
+  letter-spacing: 0 !important;
+}
 

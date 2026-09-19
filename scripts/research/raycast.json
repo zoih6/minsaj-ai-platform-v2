@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://aiskill.market",
+    "name": "Inside Raycast's Design System",
+    "snippet": "Jun 28, 2026 — The DESIGN .md captures a system optimized for command palettes and list navigation, not pointer-driven dashboards. Density is a feature ... Read more",
+    "host_name": "aiskill.market",
+    "rank": 0,
+    "date": "Jun 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.designmd.co",
+    "name": "raycast Design System, Tokens and DESIGN.md | DesignMD",
+    "snippet": "7 days ago — raycast relies on a system font stack , so its interface renders in each platform's native UI typeface. What are raycast's brand colors? Read more",
+    "host_name": "www.designmd.co",
+    "rank": 1,
+    "date": "Sep 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://styles.refero.design",
+    "name": "Raycast design system | Refero Styles",
+    "snippet": "Navigation floats with a glass-blur effect, and most interactive surfaces are neutral light-gray buttons on dark, not chromatic CTAs. The hero abandons the ... Read more",
+    "host_name": "styles.refero.design",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "VoltAgent/awesome-design-md - raycast",
+    "snippet": "A collection of DESIGN.md files analysis by popular brand design systems . Drop one into your project and let coding agents generate a matching UI.",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.raycast.com",
+    "name": "A fresh look and feel - Raycast Blog",
+    "snippet": "Jul 19, 2022 — Here at Raycast, we have three design principles: fast, simple, and delightful . 1. A bigger search bar and icons. Almost every interaction goes ...",
+    "host_name": "www.raycast.com",
+    "rank": 4,
+    "date": "Jul 19, 2022",
+    "favicon": ""
+  },
+  {
+    "url": "https://destiner.io",
+    "name": "Designing a Command Palette | Destiner's notes",
+    "snippet": "Apr 21, 2022 — Raycast is a system-wide application , so it can't provide the ability to assign hotkeys to commands. Instead, it has aliases that allow you to ... Read more",
+    "host_name": "destiner.io",
+    "rank": 5,
+    "date": "Apr 21, 2022",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://forum.cursor.com",
+    "name": "After updating Cursor, Agent mode applies file changes",
+    "snippet": "Jun 5, 2026 — Go to Cursor Settings > Agents > Applying Changes . When Inline Diffs is off, it's auto-keep mode. Changes apply right away with no review UI . ...",
+    "host_name": "forum.cursor.com",
+    "rank": 0,
+    "date": "Jun 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.verdent.ai",
+    "name": "What Is Cursor IDE? Features, Agents, and Limits",
+    "snippet": "Jun 5, 2026 — Cursor generates and applies code , with diff review and (via BugBot) PR review. What it doesn't provide is a structured verification layer that ...",
+    "host_name": "www.verdent.ai",
+    "rank": 1,
+    "date": "Jun 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.digitalapplied.com",
+    "name": "Cursor 3: Agents Window, Cloud Agents, and What Changed",
+    "snippet": "Apr 3, 2026 — redesigned diffs view. This guide covers every major change , New diffs view -- review and commit changes , manage PRs without leaving Cursor … ...",
+    "host_name": "www.digitalapplied.com",
+    "rank": 2,
+    "date": "Apr 3, 2026",
+    "favicon": ""
+  }
+]

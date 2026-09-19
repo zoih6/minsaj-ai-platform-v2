@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://uxdesign.cc",
+    "name": "When to use loaders & empty states (and when not to)",
+    "snippet": "Feb 10, 2019 — If your page loads in less than a second, you don't need a fancy skeleton loader for sure. But if you do have to load a lot of data then you ... Read more",
+    "host_name": "uxdesign.cc",
+    "rank": 0,
+    "date": "Feb 10, 2019",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.pencilandpaper.io",
+    "name": "Empty State UX Examples & Best Practices",
+    "snippet": "May 6, 2024 — Improving empty state UX patterns with examples from onboarding, using dummy data, inbox zero and no search results.",
+    "host_name": "www.pencilandpaper.io",
+    "rank": 1,
+    "date": "May 6, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.saasui.design",
+    "name": "SaaS Loading & Skeleton UX: Real Examples & Patterns",
+    "snippet": "Jun 22, 2026 — A practical guide to SaaS loading and skeleton-state UX — the part of a product that decides whether waiting feels fast or broken: skeleton ... Read more",
+    "host_name": "www.saasui.design",
+    "rank": 2,
+    "date": "Jun 22, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://kompassify.com",
+    "name": "Empty States: The Most Underrated Screen in Your Product",
+    "snippet": "How to Design Empty States: 9 Best Practices · 1. Inventory your empty states — you have more than you think · 2. Never leave a dead end — every empty state gets ... Read more",
+    "host_name": "kompassify.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://uxmagic.ai",
+    "name": "Empty States in UI Design: Best Practices & Examples",
+    "snippet": "Sep 1, 2026 — Specify skeleton loading animations prior to empty state rendering to prevent layout shifting. Store all microcopy in localized content files ...",
+    "host_name": "uxmagic.ai",
+    "rank": 4,
+    "date": "Sep 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://userpilot.com",
+    "name": "Loading Page Examples That Reduce User Frustration in",
+    "snippet": "Aug 25, 2026 — Use empty states to communicate , not just fill space. Skeleton screens and placeholder text should show people what's coming. Microcopy UX needs ... Read more",
+    "host_name": "userpilot.com",
+    "rank": 5,
+    "date": "Aug 25, 2026",
+    "favicon": ""
+  }
+]

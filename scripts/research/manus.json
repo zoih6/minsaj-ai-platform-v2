@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.simplilearn.com",
+    "name": "What is Manus AI? The Next Step in Autonomous",
+    "snippet": "Jul 1, 2026 — This autonomous AI agent can open websites, click buttons, AI utilizes a structured agent loop, which delegates subtasks to specific sub- agents .",
+    "host_name": "www.simplilearn.com",
+    "rank": 0,
+    "date": "Jul 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.baytechconsulting.com",
+    "name": "Manus AI: An Analytical Guide to the Autonomous AI Agent",
+    "snippet": "May 23, 2025 — Discover Manus AI —an autonomous AI agent built to plan, execute, and deliver complex tasks independently. Learn how it's reshaping ...",
+    "host_name": "www.baytechconsulting.com",
+    "rank": 1,
+    "date": "May 23, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://aiuxplayground.com",
+    "name": "Manus Output, artifacts & refinement UX Case Study",
+    "snippet": "Jun 30, 2026 — The thread shows agent status (“ Manus is working”), file edit cards, and structured deliverables when a task completes.",
+    "host_name": "aiuxplayground.com",
+    "rank": 2,
+    "date": "Jun 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.singlegrain.com",
+    "name": "Manus AI: The Ultimate Guide to Understanding and Using It",
+    "snippet": "Apr 27, 2025 — Manus AI can research, code & execute tasks autonomously . Learn how it works, pricing, limitations & best use cases. Read the guide.",
+    "host_name": "www.singlegrain.com",
+    "rank": 3,
+    "date": "Apr 27, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://manus.im",
+    "name": "Context Engineering for AI Agents: Lessons from Building",
+    "snippet": "Jul 18, 2025 — A typical task in Manus requires around 50 tool calls on average. That's a long loop—and since Manus relies on LLMs for decision-making, it's ... Read more",
+    "host_name": "manus.im",
+    "rank": 4,
+    "date": "Jul 18, 2025",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://open-design.ai",
+    "name": "Linear design system — palette, typography & tokens for",
+    "snippet": "56 tokens conforming to the the same structured palette, type, spacing , and motion values your agent reads to theme any artifact. spacing relaxes toward normal.",
+    "host_name": "open-design.ai",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://lobehub.com",
+    "name": "linear-design-system | Skills Market",
+    "snippet": "3 days ago — Use it when adding components, updating design tokens (colors, typography , spacing , shadows), migrating legacy UI, validating component ... Read more",
+    "host_name": "lobehub.com",
+    "rank": 1,
+    "date": "Sep 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "DESIGN.md - linear.app",
+    "snippet": "A collection of DESIGN.md files analysis by popular brand design systems . Drop one into your project and let coding agents generate a matching UI.",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://linear.app",
+    "name": "How we redesigned the Linear UI (part Ⅱ)",
+    "snippet": "Mar 28, 2024 — We've adjusted the sidebar, tabs, headers, and panels to reduce visual noise, maintain visual alignment, and increase the hierarchy and density ... Read more",
+    "host_name": "linear.app",
+    "rank": 3,
+    "date": "Mar 28, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.designmd.supply",
+    "name": "linear.app",
+    "snippet": "Typ ography is Inter Variable throughout, with a compact, slightly tightened tracking on most text. Avoid decorative typography, all-caps sections, or overly ...",
+    "host_name": "www.designmd.supply",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.designlang.app",
+    "name": "linear.app design system",
+    "snippet": "3. Snap spacing values to the scale above . No off-scale paddings or margins. 4. Snap border radii to the scale above. 5. Match the voice: same tone, same ... Read more",
+    "host_name": "www.designlang.app",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

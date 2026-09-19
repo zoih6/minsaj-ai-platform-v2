@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+    "name": "Get started with Claude Design | Claude Help Center",
+    "snippet": "Claude Design lets you create designs, interactive prototypes, one-pagers, and other visual work by having a conversation with Claude.",
+    "host_name": "support.claude.com",
+    "rank": 0,
+    "date": "Sep 17, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://note.com/neko_designs/n/n737993a8c8b0?hl=en",
+    "name": "How \"Artifact-Centric UX,\" Created Alongside AI, Is",
+    "snippet": "With the arrival of ChatGPT Canvas and Claude Artifacts, UI design is undergoing a dramatic evolution from \"conversation\" to \"collaboration.",
+    "host_name": "note.com",
+    "rank": 1,
+    "date": "Aug 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=MCQzb2iVrXE&vl=en",
+    "name": "Learn About Artifacts in Claude AI: The Ultimate 2026 Guide to",
+    "snippet": "In this step-by-step tutorial, you will learn about Artifacts in Claude AI completely for FREE. If you want to boost your productivity by ...",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mindstudio.ai/blog/claude-on-demand-generative-ui-vs-canvas-artifacts",
+    "name": "What Is Claude's On-Demand Generative UI? How It Differs",
+    "snippet": "Artifacts are generated outputs Claude places in a panel as complete deliverables. Canvas is for creating and refining; Artifacts are for ...",
+    "host_name": "www.mindstudio.ai",
+    "rank": 3,
+    "date": "Mar 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1fvydtc/chatgpt_canvas_vs_claude_artifacts_for_coding",
+    "name": "ChatGPT Canvas vs Claude Artifacts for Coding : r/ClaudeAI",
+    "snippet": "ChatGPT Canvas is a dedicated experience for code completion, review, debug · Claude artifacts has already been doing some of this for a while, ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://tao-hpu.medium.com/claudes-artifacts-why-it-s-revolutionizing-ai-from-conversation-to-creation-314fd59c5073",
+    "name": "Claude's Artifacts: Why It's Revolutionizing AI From  - Medium",
+    "snippet": "Claude's Artifacts system represents a fundamental reimagining of how humans interact with AI — evolving from conversational exchanges to ...",
+    "host_name": "tao-hpu.medium.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

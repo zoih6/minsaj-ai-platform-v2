@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://uxplanet.org",
+    "name": "The One Color Decision That Makes a UI Look Expensive",
+    "snippet": "Mar 9, 2026 — Look past the brand color . Look at the backgrounds, the borders , the muted text, and the shadows. it is the one that separates a UI that feels ...",
+    "host_name": "uxplanet.org",
+    "rank": 0,
+    "date": "Mar 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "DESIGN.md - linear.app",
+    "snippet": "A collection of DESIGN .md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI .",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://styles.refero.design",
+    "name": "Linear design system | Refero Styles",
+    "snippet": "The interface treats darkness as a substrate rather than a theme : borders are hairline -thin (0.5px) to let geometry do the work that shadows usually would.  ...",
+    "host_name": "styles.refero.design",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.muz.li",
+    "name": "Mastering Elevation for Dark UI: A Comprehensive Guide",
+    "snippet": "Aug 28, 2024 — In dark UI, elevation is expressed through lightening the base color . Typically, you might use 4–6 levels of elevation, depending on the ... Read more",
+    "host_name": "medium.muz.li",
+    "rank": 3,
+    "date": "Aug 28, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://linear.app",
+    "name": "A calmer interface for a product in motion",
+    "snippet": "Mar 12, 2026 — An integrated color picker — Linear already allows users to create custom themes by selecting base UI and accent colors and adjusting contrast. Read more",
+    "host_name": "linear.app",
+    "rank": 4,
+    "date": "Mar 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://app.byq.supply",
+    "name": "Linear — Design system",
+    "snippet": "Linear is a dark-first product development platform where obsessive craft meets operational clarity. Every surface is near-black, every typographic choice ... Read more",
+    "host_name": "app.byq.supply",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

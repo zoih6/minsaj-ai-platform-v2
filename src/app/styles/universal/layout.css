@@ -163,7 +163,7 @@
   border-block-end: 1px solid var(--u-line, #e4e6ef);
   color: var(--u-faint, #6a6e85);
   font-size: var(--mj-text-caption);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 .mj-data-list__row {
