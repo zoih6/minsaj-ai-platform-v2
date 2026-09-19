@@ -185,13 +185,13 @@
 .u-feedback[data-feedback-state="working"] .u-feedback__icon svg { animation: u-status-spin var(--u-motion-duration-activity-cycle) linear infinite; }
 .u-feedback__body { min-width: 0; }
 .u-feedback__body > small,.u-feedback__body > strong { display: block; }
-.u-feedback__body > small { color: var(--u-feedback-accent); font-size: var(--u-text-xs); font-weight: 600; }
+.u-feedback__body > small { color: var(--u-feedback-accent); font-size: var(--u-text-xs); font-weight: 500; }
 .u-feedback__body > strong { margin-block-start: 2px; color: var(--u-ink); font-size: var(--u-text-sm); }
 .u-feedback__body > p { margin: 3px 0 0; color: var(--u-muted); font-size: var(--u-text-sm); line-height: var(--mj-leading-small); }
 .u-feedback__progress { width: min(260px,100%); height: 4px; margin-block-start: 9px; display: block; overflow: hidden; border-radius: var(--u-radius-pill); background: color-mix(in srgb,var(--u-feedback-accent) 12%,#fff); }
 .u-feedback__progress > i { width: 82%; height: 100%; display: block; border-radius: inherit; background: var(--u-feedback-accent); transform-origin: inline-start center; animation: u-progress-grow var(--u-motion-duration-progress) var(--u-motion-ease-standard) both; }
 .u-feedback__action { display: flex; align-items: center; justify-content: flex-end; gap: var(--mj-gap-2xs); }
-.u-feedback__action :is(a,button) { min-height: var(--u-touch); padding-inline: 12px; display: inline-flex; align-items: center; justify-content: center; gap: var(--mj-gap-2xs); border: 1px solid color-mix(in srgb,var(--u-feedback-accent) 18%,var(--u-line)); border-radius: var(--u-radius-sm); color: var(--u-feedback-accent); background: var(--u-surface-solid); text-decoration: none; font-size: var(--u-text-sm); font-weight: 600; cursor: pointer; }
+.u-feedback__action :is(a,button) { min-height: var(--u-touch); padding-inline: 12px; display: inline-flex; align-items: center; justify-content: center; gap: var(--mj-gap-2xs); border: 1px solid color-mix(in srgb,var(--u-feedback-accent) 18%,var(--u-line)); border-radius: var(--u-radius-sm); color: var(--u-feedback-accent); background: var(--u-surface-solid); text-decoration: none; font-size: var(--u-text-sm); font-weight: 500; cursor: pointer; }
 .u-feedback__action :is(a,button):first-child:not(:only-child) { color: #fff; background: var(--u-feedback-accent); }
 @keyframes u-feedback-in {
   from { opacity: 0; transform: translateY(var(--u-motion-distance-sm)); }
@@ -240,7 +240,7 @@
 .u-feedback-toast[data-tone="info"] { border-color: var(--u-primary-soft-line); color: var(--u-primary); background: var(--u-glass-strong); }
 .u-feedback-toast > span { width: 33px; height: 33px; display: grid; place-items: center; border-radius: var(--u-radius-sm); color: white; background: currentColor; }
 .u-feedback-toast > span svg { color: white; }
-.u-feedback-toast p { margin: 0; color: var(--u-ink-soft); font-size: var(--u-text-sm); font-weight: 600; line-height: var(--mj-leading-small); }
+.u-feedback-toast p { margin: 0; color: var(--u-ink-soft); font-size: var(--u-text-sm); font-weight: 500; line-height: var(--mj-leading-small); }
 .u-feedback-toast button { width: var(--u-touch); height: var(--u-touch); display: grid; place-items: center; border: 0; border-radius: var(--u-radius-sm); color: var(--u-muted); background: transparent; cursor: pointer; }
 @keyframes u-toast-in {
   from { opacity: 0; transform: translateY(var(--u-motion-distance-md)); }
@@ -249,7 +249,7 @@
 
 /* Empty state recovery and bounded item entrance */
 .universal-library-empty { animation: u-feedback-in var(--u-motion-duration-moderate) var(--u-motion-ease-enter) both; }
-.universal-library-empty button { min-height: var(--u-touch); margin-block-start: 12px; padding-inline: 16px; border: 1px solid var(--u-line-strong); border-radius: var(--u-radius-sm); color: var(--u-primary); background: var(--u-surface-solid); font-weight: 600; cursor: pointer; }
+.universal-library-empty button { min-height: var(--u-touch); margin-block-start: 12px; padding-inline: 16px; border: 1px solid var(--u-line-strong); border-radius: var(--u-radius-sm); color: var(--u-primary); background: var(--u-surface-solid); font-weight: 500; cursor: pointer; }
 
 /* The route loader remains meaningful when motion is absent. */
 .route-loading__mark { animation-duration: var(--u-motion-duration-activity-cycle); }
