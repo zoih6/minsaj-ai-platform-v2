@@ -1,0 +1,16 @@
+You are a senior product designer performing a rigorous visual QA audit in the style of Linear and Vercel design standards (calm, restrained, precise, premium). This is the HOME page of "Minsaj" (منسج) — an Arabic RTL-first AI platform. Light theme, desktop 1440px.
+
+Audit this screenshot with a hyper-critical eye. For EACH area below, list concrete visual defects (not generic advice — specific, fixable issues with locations):
+
+1. HIERARCHY & CALM: Does the page read calm and premium, or busy/noisy? Where exactly does noise come from (too many colors, competing elements, decorative clutter)?
+2. SPACING & ALIGNMENT: Any misalignments, cramped or inconsistent gaps, elements that don't sit on a rhythm grid? Check hero header, chips rows, composer card, tiles grid, recents grid.
+3. TYPOGRAPHY: Hierarchy clarity (h1 vs h2 vs labels vs body)? Any text that looks stretched, broken letter-connections (Arabic letter-spacing bug), inconsistent sizes/weights, shouting text?
+4. COLOR DISCIPLINE: How many hues compete for attention? Which elements use color unnecessarily? Is the primary CTA clear as THE accent?
+5. CARDS & SURFACES: Border/shadow consistency. Heavy shadows? Inconsistent radii? Cards that feel "AI-generated"?
+6. THE COMPOSER (task card with textarea): Does it feel like the hero/primary element? Precision issues in padding, icon alignment, button styling?
+7. SERVICE TILES (7 tiles grid): min-height consistency, icon+badge alignment, text truncation, hover affordance clarity?
+8. RECENT WORK CARVERS + "why" card: Cover art quality, badge/crowding, meta text alignment?
+9. Details a Linear/Vercel designer would ship that are missing here (e.g., missing dividers, missing section rhythm, focus/hover affordances)?
+10. Overall first impression score /10 for "premium feel" and the TOP 5 things hurting it most, ranked.
+
+Format: numbered findings with severity (P0 critical eye-sore / P1 noticeable / P2 subtle), each with exact location description. Be brutally specific. Do NOT praise; find problems.

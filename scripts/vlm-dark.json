@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1. **Invisible or too-faint borders/text:** PASS. All text and borders are clearly legible against the dark background.\n2. **Surfaces that blend into each other (missing separation):** P2. The outer border of the main composer card is extremely faint, making it difficult to distinguish from the page background at a glance.\n3. **Segmented pill tabs row — active tab visibility:** PASS. The \"أسئلة\" (Questions) tab is clearly highlighted with a distinct background and icon color.\n4. **Shadow soup or glow artifacts:** P1. There is noticeable \"glow soup\" or heavy blur/glow around the main card's edges and the inner input areas, which looks slightly muddy on dark mode.\n5. **Contrast failures on captions/meta text:** P2. The sub-headline text (\"مرحباً بك في...\") and the placeholder text inside the input field have low contrast, appearing somewhat washed out.\n\n**Dark-Mode Premium Score: 7.5/10**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789844867,
+  "id": "20260920030740712fe4fc9e9e4ce5",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20260920030740712fe4fc9e9e4ce5",
+  "usage": {
+    "completion_tokens": 211,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4021,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4232
+  }
+}

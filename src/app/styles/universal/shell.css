@@ -184,7 +184,8 @@
 .universal-shell-context { grid-area: context; min-width: 0; display: flex; align-items: center; gap: var(--mj-gap-xs); }
 .universal-shell-context > button { width: var(--mj-touch); height: var(--mj-touch); flex: 0 0 auto; display: grid; place-items: center; border: 0; border-radius: var(--u-radius-sm); color: var(--u-ink); background: var(--u-hover-veil); cursor: pointer; }
 .universal-shell-context > span { overflow: hidden; color: var(--u-ink); text-overflow: ellipsis; white-space: nowrap; font-size: var(--mj-text-body); font-weight: 600; }
-.universal-shell-context > small { min-height: 26px; padding-inline: 9px; display: none; align-items: center; gap: var(--mj-gap-xs); border: 1px solid var(--u-glass-line); border-radius: var(--u-radius-pill); color: var(--u-primary); background: var(--u-primary-soft); font-size: var(--mj-text-caption); font-weight: 600; }
+.universal-shell-context > small { min-height: 26px; padding-inline: 2px; display: none; align-items: center; gap: 6px; border: 0; color: var(--u-muted); background: transparent; font-size: var(--mj-text-caption); font-weight: 500; }
+.universal-shell-context > small svg { color: var(--u-primary); }
 
 .universal-shell-search {
   grid-area: search;

@@ -1,0 +1,16 @@
+You are a senior product designer performing a rigorous visual QA audit in the style of Linear and Vercel design standards (calm, restrained, precise, premium). This is the HOME page of "Minsaj" (منسج) — an Arabic RTL-first AI platform, light theme, desktop 1440px. The page was just redesigned with these intentions: calm hero (reduced decorative gradients/ambient), a single segmented control for task modes (replacing duplicate chip rows), quiet neutral suggestion chips, hairline borders + token-scale shadows instead of glow shadows, quiet section caption labels, 4+3 tile grid rhythm, simplified recent-work covers.
+
+Score this NEW version strictly:
+
+1. HIERARCHY & CALM: Does the hero read calm and premium now? Is the composer (task card with textarea) clearly THE primary element? Any remaining noise sources?
+2. SPACING & ALIGNMENT: rhythm consistency across: hero header → segmented modes → composer → suggestion chips → sections. Any misalignments or cramped gaps?
+3. TYPOGRAPHY: hierarchy clarity (h1 vs h2 vs captions vs body)? Any broken or stretched Arabic text?
+4. COLOR DISCIPLINE: how many elements compete for attention with color? Is the primary CTA button the clear accent? Are tiles/cards appropriately neutral?
+5. CARDS & SURFACES: shadow/border consistency? Do cards feel flat-precision (Linear-like) or still "AI-generated floating"?
+6. SEGMENTED MODES CONTROL (the pill-shaped tabs row inside the task card): does it read as one coherent control? Active tab clarity?
+7. SUGGESTION CHIPS below composer: quiet and intentional?
+8. SERVICE TILES (4+3 grid): alignment, badge quietness, sample-line treatment?
+9. RECENT WORK row + why-card: covers calm? meta text readable?
+10. RTL quality: anything looking LTR-forced or misaligned for Arabic?
+
+Then: Overall premium-feel score /10 (previous version scored 5/10), and the TOP 3 remaining weaknesses (if any), ranked. Be specific and honest — do NOT inflate the score. If something is genuinely premium now, say so briefly; spend most words on real remaining issues.

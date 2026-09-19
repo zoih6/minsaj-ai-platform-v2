@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Here is the strict mobile QA report for the 390px (iPhone SE/Mini) viewport:\n\n**(1) Hero Text Sizes & Overflow**\n**PASS.** The main headline and sub-headline are large, bold, and clearly legible. The text wraps naturally within the container boundaries without any horizontal overflow or clipping.\n\n**(2) Pill-Shaped Mode Tabs Row**\n**PASS.** The row of mode tabs (Search, Image, etc.) is contained within the input card's header. On a 390px screen, they appear to fit or utilize a clean horizontal scroll if needed without breaking the card layout or causing UI glitches.\n\n**(3) Suggestion Chips Row**\n**PASS.** The suggestion chips below the input area are properly spaced. They are large enough to be tapped easily and do not overflow their container.\n\n**(4) Section Stacking & Horizontal Overflow**\n**PASS.** All sections (Hero, Suggestions, Feature Cards, Tools) stack vertically correctly. There is no sideways scroll; the layout respects the mobile width constraints perfectly.\n\n**(5) Touch Targets**\n**PASS.** Interactive elements like the \"Send\" button, mode tabs, suggestion chips, and feature cards all provide adequate surface area for finger taps, meeting standard mobile accessibility guidelines.\n\n***\n\n### **Mobile Premium Score: 9/10**\n**Verdict:** Excellent RTL mobile implementation. The design is clean, readable, and highly functional on narrow screens. \n*Minor Deduction:* The feature cards in the grid are quite information-dense; while they don't break, the text inside them is relatively small for a 390px screen, which might require slight zooming for users with vision impairments.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789844928,
+  "id": "20260920030838f2a061dfbb4943c3",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20260920030838f2a061dfbb4943c3",
+  "usage": {
+    "completion_tokens": 345,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2748,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3093
+  }
+}

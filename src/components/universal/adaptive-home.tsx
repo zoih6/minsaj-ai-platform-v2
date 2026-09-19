@@ -12,9 +12,7 @@ import {
   CheckCircle2,
   Code2,
   Compass,
-  FileText,
   GraduationCap,
-  Image as ImageIcon,
   LoaderCircle,
   MessageCircle,
   Mic,
@@ -64,7 +62,6 @@ export function AdaptiveHome({ locale }: { locale: Locale }) {
         greeting: "مرحبًا، ماذا تريد أن تنجز؟",
         intro: "اختر اتجاهًا أو اكتب بطريقتك. منسج سيهيئ المساحة والأدوات المناسبة دون أن يربكك بالتفاصيل.",
         customize: "خصّص تجربتي",
-        focus: "أهدافك الحالية",
         change: "تغيير",
         start: "ابدأ",
         attach: "إرفاق ملف",
@@ -106,7 +103,6 @@ export function AdaptiveHome({ locale }: { locale: Locale }) {
         greeting: "Hello, what would you like to accomplish?",
         intro: "Choose a direction or write naturally. Minsaj prepares the right space and tools without overwhelming you with setup.",
         customize: "Personalize my experience",
-        focus: "Your current goals",
         change: "Change",
         start: "Start",
         attach: "Attach a file",
@@ -205,7 +201,6 @@ export function AdaptiveHome({ locale }: { locale: Locale }) {
     setToast(copy.goalsSaved);
   }
 
-  const goalServices = goals.map((id) => services.find((service) => service.id === id)).filter((service): service is NonNullable<typeof service> => Boolean(service));
   const orderedServices = [...services].sort((a, b) => Number(goals.includes(b.id)) - Number(goals.includes(a.id)));
   const recentCards = isArabic
     ? [
@@ -228,48 +223,28 @@ export function AdaptiveHome({ locale }: { locale: Locale }) {
           <div className="adaptive-home__ambient adaptive-home__ambient--two" />
           <header className="adaptive-home__welcome">
             <div>
-              <span className="adaptive-home__eyebrow"><Sparkles size={14} />{copy.eyebrow}<i />{copy.personal}</span>
+              <span className="adaptive-home__eyebrow">{copy.eyebrow}<i />{copy.personal}</span>
               <h1>{copy.greeting}</h1>
               <p>{copy.intro}</p>
             </div>
             <Dialog.Trigger asChild><button type="button" className="adaptive-personalize"><SlidersHorizontal size={16} />{copy.customize}</button></Dialog.Trigger>
           </header>
 
-          <div className="adaptive-goals-bar mj-control-bar">
-            <span className="mj-control-bar__label">{copy.focus}</span>
-            <div className="mj-control-bar__group adaptive-goals-bar__goals" role="group" aria-label={copy.focus}>
-              {goalServices.map((service) => {
+          <div className="adaptive-task-card">
+            <div className="adaptive-task-modes" role="tablist" aria-label={isArabic ? "اختر اتجاه المهمة" : "Choose a task direction"}>
+              {orderedServices.map((service) => {
                 const Icon = serviceIcons[service.id];
                 return (
-                  <button
-                    type="button"
-                    className={`mj-chip adaptive-goals-bar__goal${activeId === service.id ? " is-active" : ""}`}
-                    aria-pressed={activeId === service.id}
-                    onClick={() => chooseService(service.id)}
-                    key={service.id}
-                  >
-                    <Icon size={14} />{service.shortLabel}
+                  <button key={service.id} role="tab" aria-label={service.shortLabel} aria-selected={active.id === service.id} type="button" onClick={() => chooseService(service.id)} className={active.id === service.id ? "is-active" : ""}>
+                    <Icon size={16} /><span>{service.shortLabel}</span>
+                    {goals.includes(service.id) ? <i className="adaptive-task-modes__mark" aria-hidden="true" /> : null}
                   </button>
                 );
               })}
             </div>
-            <Dialog.Trigger asChild>
-              <button type="button" className="mj-chip adaptive-goals-bar__change mj-control-bar__tail">
-                <Plus size={14} />{copy.change}
-              </button>
-            </Dialog.Trigger>
-          </div>
-
-          <div className="adaptive-task-card">
-            <div className="adaptive-task-modes" role="tablist" aria-label={isArabic ? "اختر اتجاه المهمة" : "Choose a task direction"}>
-              {services.map((service) => {
-                const Icon = serviceIcons[service.id];
-                return <button key={service.id} role="tab" aria-label={service.shortLabel} aria-selected={active.id === service.id} type="button" onClick={() => chooseService(service.id)} className={active.id === service.id ? "is-active" : ""}><Icon size={18} /><span>{service.shortLabel}</span></button>;
-              })}
-            </div>
             <div className="adaptive-task-composer">
               <div className="adaptive-task-composer__icon"><ActiveIcon size={20} /></div>
-              <textarea ref={textareaRef} rows={3} value={prompt} onChange={(event) => { cancelPendingRun(); setPrompt(event.target.value); setRunState("idle"); }} placeholder={active.prompt} aria-label={active.prompt} aria-invalid={runState === "error"} aria-describedby={runState === "error" ? "adaptive-task-error" : undefined} />
+              <textarea ref={textareaRef} rows={2} value={prompt} onChange={(event) => { cancelPendingRun(); setPrompt(event.target.value); setRunState("idle"); }} placeholder={active.prompt} aria-label={active.prompt} aria-invalid={runState === "error"} aria-describedby={runState === "error" ? "adaptive-task-error" : undefined} />
               <div className="adaptive-task-composer__actions">
                 <div><button type="button" title={copy.attach} aria-label={copy.attach}><Paperclip size={18} /></button><button type="button" title={copy.voice} aria-label={copy.voice}><Mic size={18} /></button><span>{active.eyebrow}</span></div>
                 <button type="button" className="adaptive-task-submit" onClick={startTask} disabled={runState === "thinking"} data-loading={runState === "thinking"}><span>{runState === "thinking" ? copy.preparingShort : copy.start}</span>{runState === "thinking" ? <LoaderCircle size={18} /> : <ArrowUp size={18} />}</button>
@@ -306,7 +281,7 @@ export function AdaptiveHome({ locale }: { locale: Locale }) {
               const preferred = goals.includes(service.id);
               return (
                 <Link href={`/${locale}/app/${service.slug}`} data-service={service.id} className="adaptive-service-tile" key={service.id}>
-                  <div><span><Icon size={20} /></span>{preferred ? <small><Sparkles size={12} />{copy.recommended}</small> : null}<ArrowLeft size={16} /></div>
+                  <div><span><Icon size={20} /></span>{preferred ? <small>{copy.recommended}</small> : null}<ArrowLeft size={16} /></div>
                   <h3>{service.label}</h3><p>{service.description}</p>
                   <span className="adaptive-service-tile__sample">{service.starters[0]}</span>
                 </Link>
@@ -325,7 +300,7 @@ export function AdaptiveHome({ locale }: { locale: Locale }) {
               const Icon = card.icon;
               return (
                 <Link href={`/${locale}/app/${card.service}`} className="adaptive-recent-card" key={card.title}>
-                  <div className={`adaptive-recent-card__cover adaptive-recent-card__cover--${index + 1}`}><Icon size={28} /><span>{index === 0 ? <FileText size={16} /> : index === 1 ? <SearchCheck size={16} /> : <ImageIcon size={16} />}</span></div>
+                  <div className={`adaptive-recent-card__cover adaptive-recent-card__cover--${index + 1}`}><Icon size={26} /></div>
                   <div className="adaptive-recent-card__body"><span>{card.type}</span><h3>{card.title}</h3><p>{card.meta}</p><small><CheckCircle2 size={12} />{copy.saved}</small></div>
                 </Link>
               );
