@@ -1,0 +1,157 @@
+======= home-1440 =======
+Based on a meticulous visual QA pass of the provided screenshot, here are the findings:
+
+**1. Misalignments**
+*   **Location:** Main content container (center card) vs. Right Sidebar.
+    *   **Issue:** The main content area is not horizontally centered relative to the viewport; it is shifted significantly to the left, leaving an awkwardly large gap between it and the right sidebar.
+    *   **Severity:** P2 (Inconsistent)
+*   **Location:** Bottom section ("سؤال سابق...").
+    *   **Issue:** The heading "سؤال سابق، وسؤال ولا..." and its subtext are center-aligned, but the "استشنتني الحالي" link on the far left is left-aligned. This creates a disconnected visual rhythm.
+    *   **Severity:** P3 (Polish)
+
+**2. Inconsistent Spacing**
+*   **Location:** Input area inside the main card.
+    *   **Issue:** The vertical padding above the placeholder text "اسأل، اكتب كودك..." is significantly larger than the padding below it (before the attachment/mic icons). The text feels like it's sinking towards the bottom of the input box.
+    *   **Severity:** P2 (Inconsistent)
+*   **Location:** Main Card internal layout.
+    *   **Issue:** The gap between the sub-headline and the suggestion chips is very large compared to the tight spacing between the input box and the bottom action buttons.
+    *   **Severity:** P3 (Polish)
+
+**3. Inconsistent Radii/Borders/Shadows**
+*   **Location:** "إرسال" (Send) button.
+    *   **Issue:** The button has a noticeably sharper border-radius (more rectangular) compared to the softer, more rounded corners of the "محادثة جديدة" button in the top right sidebar.
+    *   **Severity:** P2 (Inconsistent)
+*   **Location:** Main Container vs. Inner Input Box.
+    *   **Issue:** The outer main card has a very large, soft radius, while the inner white input box has a much tighter radius. While intentional layering, the contrast in curvature styles feels slightly disjointed.
+    *   **Severity:** P3 (Polish)
+
+**4. Typography Problems**
+*   **Location:** Main Headline "مرحباً، ماذا تريد أن تفعل؟".
+    *   **Issue:** The text appears slightly misaligned or the line-height is too tight for such a large font size, making the descenders of letters like 'ب' and 'ن' 
+
+======= chat-1440 =======
+Based on a meticulous visual QA pass of the provided screenshot, here are the concrete, visually verifiable issues:
+
+**1. Misalignments**
+*   **Location:** Main content area (Left Sidebar vs. Center Panel).
+*   **Issue:** The top edge of the "موضوع" (Topic) sidebar card is not vertically aligned with the top edge of the "سؤال" (Question) and "مهمة" (Task) cards in the center panel. The sidebar card sits noticeably lower.
+*   **Severity:** P2 (Inconsistent)
+*   **Location:** Bottom cards grid (Right column).
+*   **Issue:** The bottom-most card ("رؤية نكتة النشرة") is misaligned with the card above it ("بنيّة رؤية محتوى"). Its left edge extends further left than the card above it, breaking the vertical grid alignment of the right-hand column.
+*   **Severity:** P2 (Inconsistent)
+
+**2. Inconsistent Spacing**
+*   **Location:** Left Sidebar (Steps list).
+*   **Issue:** The vertical spacing between the numbered steps (1 through 4) appears slightly uneven or inconsistent compared to the rigid grid spacing used elsewhere in the UI.
+*   **Severity:** P3 (Polish)
+*   **Location:** Bottom Cards Grid.
+*   **Issue:** The horizontal gap between the first column of cards and the second column is significantly wider than the gap between the second and third columns.
+*   **Severity:** P2 (Inconsistent)
+
+**3. Inconsistent Radii / Borders / Shadows**
+*   **Location:** Top Navigation Bar.
+*   **Issue:** The search input field has rounded corners (approx. 8px-12px radius), while the language selector dropdown ("EN") next to it has square corners (0px radius). This creates a visual mismatch in the header controls.
+*   **Severity:** P2 (Inconsistent)
+
+**4. Typography Problems**
+*   **Location:** Center Input Area (Placeholder text).
+*   **Issue:** The placeholder text inside the main text area ("اسأل، اكتب فكرة أو ما تريد إنجازه...") appears to have excessive letter-spacing or tracking compared to the rest of the Arabic typography on the page, making it look airy and disconnected.
+*   **Severity:** P3 (Polish)
+
+**Overall Impression:**
+The interface is clean and well-structured overall, but it suffers from minor grid misalignments in the lower content blocks and inconsistent border trea
+
+======= learn-1440 =======
+Based on a visual QA pass of the provided screenshot, here are the concrete issues found:
+
+**1. Misalignments**
+*   **Location:** Header (Top Bar)
+    *   **Issue:** The "Minsaj" logo on the right is not vertically centered with the "EN", sun icon, and search bar elements on the left.
+    *   **Severity:** P3
+*   **Location:** Sidebar Navigation
+    *   **Issue:** The active state indicator (green dot) for the "Chat" item is misaligned vertically relative to the text and icon baseline compared to other inactive items.
+    *   **Severity:** P3
+*   **Location:** Form Section - "Input Prompt Here"
+    *   **Issue:** The label text is centered, but the text cursor/caret visible inside the input box is aligned to the far left (LTR start), which breaks the RTL flow expectation for the input field itself.
+    *   **Severity:** P2
+
+**2. Inconsistent Spacing**
+*   **Location:** Filter Tags Row
+    *   **Issue:** The horizontal gap between the filter chips (e.g., between "All Categories" and "Marketing") is uneven; some gaps appear slightly wider than others.
+    *   **Severity:** P3
+*   **Location:** "Words and Phrases" Section
+    *   **Issue:** The vertical spacing between the section title and the two option cards ("Allow", "Block") is significantly larger than the spacing below the cards and the "Language" dropdown, creating an unbalanced rhythm.
+    *   **Severity:** P3
+
+**3. Inconsistent Radii/Borders/Shadows**
+*   **Location:** Action Buttons (Bottom of form)
+    *   **Issue:** The main "Create Chatbot" button has sharp corners (0px radius), while the "Save Draft" link/button area above it and the filter chips above have rounded corners (approx 8px-12px). This creates a visual inconsistency in the component library.
+    *   **Severity:** P2
+
+**4. Typography Problems**
+*   **Location:** Main Heading "Create Chatbot"
+    *   **Issue:** The font weight/size difference between "Create" and "Chatbot" feels slightly unbalanced, making "Chatbot" look disproportionately heavy or large compared to the lead-in word.
+    *   **Severity:** P3
+
+**Overall Impression:**
+The interface is clean and functional, but suffers from minor RTL alignment inconsistencies in the header/side
+
+======= research-1440 =======
+**Visual QA Report: Arabic RTL Web App (Minsaj AI)**
+
+1.  **Misalignments**
+    *   **Location:** "سجل الآن مجانا" button (bottom) and the main container.
+    *   **Issue:** The primary action button ("سجل الآن مجانا") is not horizontally aligned with the form fields above it; it appears slightly indented or narrower than the full width of the content area. [P2]
+    *   **Location:** Filter tags row (e.g., "سواري البستاني", "مؤيد").
+    *   **Issue:** The text labels inside the filter chips are not vertically centered relative to each other or the chip borders, creating a jittery baseline across the row. [P2]
+
+2.  **Inconsistent Spacing**
+    *   **Location:** "سجل الآن مجانا" footer section (very bottom).
+    *   **Issue:** Excessive vertical whitespace between the main purple button and the secondary text/link below it ("لا توجد رسوم..."). The gap is disproportionately large compared to spacing elsewhere in the form. [P3]
+    *   **Location:** Sidebar navigation items (right edge).
+    *   **Issue:** Inconsistent vertical padding/margins between the sidebar icons and text labels compared to the spacing between the list items themselves. [P3]
+
+3.  **Inconsistent Radii/Borders/Shadows**
+    *   **Location:** "موضوع" (Subject) vs "وصف" (Description) fields.
+    *   **Issue:** The "موضوع" field has a standard border radius, while the "وصف" field (which looks like a selected state or different component type) has a noticeably larger radius and a distinct background color/border style that feels inconsistent with the input fields below it. [P2]
+    *   **Location:** Top-left "Minsaj" logo icon.
+    *   **Issue:** The purple square icon containing the 'M' logo has a sharper corner radius than the circular user avatar at the bottom of the sidebar. [P3]
+
+4.  **Typography Problems**
+    *   **Location:** Main Heading "ابدأ وثيقة".
+    *   **Issue:** The heading font weight is very bold/heavy, which combined with the specific Arabic typeface causes slight "clashing" or visual vibration against the subtext below it. [P3]
+    *   **Location:** Placeholder text in textareas ("الوصف التفصيلي للمشروع", "اقتراحك بخصوص المشروع").
+    *   **Issue:** The placeholder text color is
+
+======= create-1440 =======
+Based on a visual QA of the provided screenshot, here are the identified issues:
+
+**1. Misalignments**
+*   **Location:** "اختر نوع الصفحة" (Choose page type) section.
+*   **Issue:** The radio button options (e.g., "نوع المحتوى", "الموضوع", etc.) are not aligned on a consistent grid. The text labels and their corresponding sub-labels ("إختر من هنا") have varying vertical and horizontal positions, creating a jagged, unpolished look.
+*   **Severity:** P2
+*   **Location:** "اختر نموذج الصفحة" (Choose page template) section, bottom row of cards.
+*   **Issue:** The three cards ("تصميم بسيط", "عروض تقديمية", "مستند") are not perfectly aligned horizontally. The middle card appears slightly lower or has different internal padding than the outer two.
+*   **Severity:** P3
+
+**2. Inconsistent Spacing**
+*   **Location:** Main content area vertical rhythm.
+*   **Issue:** The gap between the "إعادة تعيين الصفحة" button and the "اختر نوع الصفحة" heading is significantly larger than the gap between the filter chips and the button above it. This creates an uneven visual flow.
+*   **Severity:** P3
+
+**3. Inconsistent Radii/Borders/Shadows**
+*   **Location:** Template selection cards ("موجز", "سلس").
+*   **Issue:** The "موجز" card has a solid light purple background fill, while the "سلس" card next to it is transparent/white with only a border. This inconsistency makes it unclear if one is selected or if they simply have different styles.
+*   **Severity:** P2
+
+**4. Typography Problems**
+*   **Location:** Page Title "إنشاء صفحة".
+*   **Issue:** The title text feels slightly misaligned with the "استخدام الإعدادات" link above it. It is pushed too far to the left compared to the right-aligned link, breaking the intended RTL alignment block.
+*   **Severity:** P3
+*   **Location:** Radio button sub-labels (e.g., "إختر من هنا").
+*   **Issue:** The font size of these helper texts is very small and the line height looks cramped, reducing readability.
+*   **Severity:** P3
+
+**Overall Impression:**
+The interface is functional and follows a modern aesthetic, but it suffers from noticeable alignment inconsistencies in the form elements and a lack of visual uniformity in the selection states of the t
+

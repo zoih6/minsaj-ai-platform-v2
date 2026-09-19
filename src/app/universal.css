@@ -97,6 +97,71 @@
 .credit-balance-card { border-block-start: 3px solid var(--u-primary); }
 .approval-decision-card { border-color: var(--u-amber-line-strong); border-block-start: 3px solid var(--u-amber); }
 
+/* ---- §2b Full-bleed footer law ---------------------------------------
+   Card footers bleed EXACTLY to the surface padding edge, whatever the
+   viewport resolves --mj-pad-card to (14→24px). The legacy hardcoded
+   bleeds (-15/-17/-18px, globals.css 569/614/636/1168/1250/1789)
+   assumed pre-v21 fixed paddings: at 24px padding the tinted footer
+   floated 7–9px inside the card (visible step + 18px-vs-16px radius
+   mismatch); at 14px (mobile) it overhung 3px past the border.
+   Geometry has ONE owner — this layer. Legacy rules keep only paint
+   (top hairline, tint, link color). Bottom corners nest inside the
+   card radius: var(--u-radius) minus its 1px border. */
+.agent-card__actions,
+.flow-card__footer,
+.project-library-card__link,
+.knowledge-collection-card > a,
+.catalog-model-card > a {
+  margin-inline: calc(var(--mj-pad-card) * -1);
+  margin-block-end: calc(var(--mj-pad-card) * -1);
+  padding: 12px var(--mj-pad-card);
+  border-radius: 0 0 calc(var(--u-radius) - 1px) calc(var(--u-radius) - 1px);
+}
+
+/* ---- §2c Pinned-footers law -------------------------------------------
+   Grid rows stretch cards to equal heights; a flow-positioned footer
+   then floats above the card bottom by exactly the stretch amount
+   (measured 11px on short catalog cards) while its flush-bleeding
+   siblings anchor to the border — a ragged bottom edge across the row.
+   Pin every full-bleed footer to the card's end: card becomes a flex
+   column (the .project-library-card already uses this idiom) and the
+   footer's block-start margin turns auto, absorbing ALL leftover
+   stretch. Min separation when no stretch exists is carried by the
+   content block above the footer. */
+.agent-card,
+.flow-card,
+.knowledge-collection-card,
+.catalog-model-card {
+  display: flex;
+  flex-direction: column;
+}
+.agent-card__actions,
+.flow-card__footer,
+.project-library-card__link,
+.knowledge-collection-card > a,
+.catalog-model-card > a {
+  margin-block-start: auto;
+}
+.agent-card > :nth-last-child(2),
+.flow-card > :nth-last-child(2),
+.project-library-card > :nth-last-child(2),
+.knowledge-collection-card > :nth-last-child(2),
+.catalog-model-card > :nth-last-child(2) {
+  margin-block-end: 14px;
+}
+
+/* Touch floor: footer links are the card's primary next-step action —
+   19px-tall raw links fail the 44px invariant on phones. */
+@media (max-width: 640px) {
+  .agent-card__actions > a,
+  .flow-card__footer > a,
+  .project-library-card__link {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
 /* ---- §3 Head rhythm --------------------------------------------------- */
 .section-heading { margin-block-end: var(--mj-gap-sm); gap: var(--mj-gap-sm) var(--mj-gap-md); }
 

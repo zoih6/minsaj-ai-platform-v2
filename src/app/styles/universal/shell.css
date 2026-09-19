@@ -423,7 +423,7 @@
 .universal-command__results > a > svg { color: var(--u-faint); }
 .universal-command__results > p { padding: 32px; color: var(--u-muted); text-align: center; font-size: var(--u-text-xs); }
 @media (max-width: 767.98px) {
-  .universal-command { inset: auto 0 0; transform: none; width: 100%; max-height: min(82dvh, 720px); border-radius: var(--u-radius-lg) 22px 0 0; }
+  .universal-command { inset: auto 0 0; transform: none; width: 100%; max-height: min(82dvh, 720px); border-radius: var(--u-radius-lg) var(--u-radius-lg) 0 0; }
   [dir="rtl"] .universal-command { transform: none; animation-name: minsaj-command-in-up; }
   .universal-command { animation-name: minsaj-command-in-up; }
   @keyframes minsaj-command-in-up { from { opacity: 0; transform: translateY(24px); } }

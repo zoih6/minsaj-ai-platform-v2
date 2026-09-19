@@ -36,9 +36,13 @@
 /* `position: relative` keeps the visually-hidden reason span inside the
    clipped stage list instead of anchoring it to the viewport (which would
    widen the document). */
-.u2-stages li { position: relative; flex: 0 0 auto; }
+.u2-stages li { position: relative; flex: 0 0 auto; display: flex; }
 .u2-stages ol:focus-visible { outline: 2px solid var(--u-primary); outline-offset: 2px; }
-.u2-stages button { min-height: var(--u-touch); padding: 7px 11px; display: grid; grid-template-columns: 16px auto; align-items: center; gap: var(--mj-gap-2xs) var(--mj-gap-xs); border: 1px solid var(--u-line); border-radius: var(--u-radius-sm); color: var(--u-muted); background: var(--u-surface-solid); text-align: start; font-size: var(--u-text-xs); }
+/* Buttons fill their stretched li: a horizontal control group reads as
+   one system (equal heights) even when a stage carries an extra reason
+   line — measured 55px buttons floating inside 76px items otherwise. */
+.u2-stages li > button { flex: 1 1 auto; align-self: stretch; }
+.u2-stages button { min-height: var(--u-touch); padding: 7px 11px; display: grid; grid-template-columns: 16px auto; align-content: center; align-items: center; gap: var(--mj-gap-2xs) var(--mj-gap-xs); border: 1px solid var(--u-line); border-radius: var(--u-radius-sm); color: var(--u-muted); background: var(--u-surface-solid); text-align: start; font-size: var(--u-text-xs); }
 .u2-stages button span { grid-column: 2; font-weight: 600; color: var(--u-ink-soft); }
 .u2-stages button small { grid-column: 2; color: var(--u-faint); font-size: var(--mj-text-caption); }
 .u2-stages button em { grid-column: 2; color: var(--u-primary-strong); font-size: var(--mj-text-caption); font-style: normal; }

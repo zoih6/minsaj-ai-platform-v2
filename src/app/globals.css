@@ -81,11 +81,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .locale-link:hover { border-color: var(--u-line-strong); color: var(--u-ink); }
 .eyebrow { margin: 0 0 16px; color: var(--u-primary); font-size: var(--u-text-sm); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 
-.workbench { position: relative; border: 1px solid var(--u-line-strong); background: var(--u-surface-solid); box-shadow: var(--u-shadow-md); }
-.rail-icon.is-active { color: white; background: rgba(255,255,255,.12); }
-.nav-item.is-active { color: white; background: rgba(255,255,255,.11); font-weight: 600; }
-.nav-item.is-active::before { content: ""; position: absolute; inset-inline-start: 0; inset-block: 9px; width: 3px; background: var(--u-amber); }
-
 /* App pages */
 .page-header { display: flex; flex-wrap: wrap; align-items: end; align-content: flex-end; justify-content: space-between; gap: 16px 24px; margin-block-end: 28px; }
 .page-header__copy { min-width: min(100%, 300px); flex: 1 1 300px; }
@@ -157,18 +152,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 [dir="rtl"] .stop-button { transform: translateX(50%); }
 .command-overlay { position: fixed; z-index: 100; inset: 0; background: rgba(9, 20, 15, .54); }
 
-@media (max-width: 1180px) {
-  .workbench { max-width: 760px; }
-}
-
-@media (max-width: 768px) {
-  .mobile-nav a.is-active { color: var(--u-primary); font-weight: 600; }
-}
-
 @media (max-width: 640px) {
   body { font-size: var(--u-text-sm); }
-  .header-actions .button { display: none; }
-  .quick-actions .button { width: 100%; }
   .chat-start h1 { font-size: 25px; }
   .composer-tool span { display: none; }
 }
@@ -566,7 +551,8 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
 .context-coverage b { color: var(--u-muted); font-family: "IBM Plex Mono", monospace; }
 .context-coverage [role="progressbar"] { height: 4px; margin-block-start: 6px; background: var(--u-line); }
 .context-coverage [role="progressbar"] span { display: block; height: 100%; background: var(--u-primary); }
-.project-library-card__link { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 14px -17px -17px; padding: 11px 17px; border-block-start: 1px solid var(--u-line); color: var(--u-primary); text-decoration: none; font-size: var(--u-text-xs); font-weight: 600; }
+/* Geometry (bleed/padding/radius) owned by universal.css §2b full-bleed footer law. */
+.project-library-card__link { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-block-start: 1px solid var(--u-line); color: var(--u-primary); text-decoration: none; font-size: var(--u-text-xs); font-weight: 600; }
 .project-library-card__link:hover { background: var(--u-surface-subtle); }
 [dir="rtl"] .project-library-card__link svg { transform: scaleX(-1); }
 .project-library.is-list .project-library-card :is(.project-library-card__copy,.project-library-card__metrics,.context-coverage) { margin: 0; }
@@ -611,7 +597,8 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
 .agent-card__facts dt { display: flex; align-items: center; gap: 4px; color: var(--u-faint); font-size: var(--u-text-xs); }
 .agent-card__facts dd { overflow: hidden; margin: 3px 0 0; color: var(--u-ink); text-overflow: ellipsis; white-space: nowrap; font-size: var(--u-text-xs); }
 .agent-card__policy { display: flex; align-items: center; gap: 7px; margin-block-start: 12px; color: var(--u-mint); font-size: var(--u-text-xs); }
-.agent-card__actions { margin: 15px -17px -17px; padding: 11px 17px; border-block-start: 1px solid var(--u-line); }
+/* Geometry owned by universal.css §2b. */
+.agent-card__actions { border-block-start: 1px solid var(--u-line); }
 .agent-card__actions > a, .flow-card__footer > a { display: inline-flex; align-items: center; gap: 5px; color: var(--u-primary); text-decoration: none; font-size: var(--u-text-xs); font-weight: 600; }
 [dir="rtl"] :is(.agent-card__actions,.flow-card__footer) > a svg { transform: scaleX(-1); }
 
@@ -633,7 +620,8 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
 .flow-card__facts > div:last-child { border-inline-end: 0; }
 .flow-card__facts dt { color: var(--u-faint); font-size: var(--u-text-xs); }
 .flow-card__facts dd { margin: 0; color: var(--u-ink); font-size: var(--u-text-xs); }
-.flow-card__footer { margin: 14px -17px -17px; padding: 11px 17px; border-block-start: 1px solid var(--u-line); }
+/* Geometry owned by universal.css §2b. */
+.flow-card__footer { border-block-start: 1px solid var(--u-line); }
 
 /* Runs table */
 .runs-table-wrap { overflow: hidden; border: 1px solid var(--u-line); background: var(--u-surface); }
@@ -1042,7 +1030,8 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
   .project-library.is-list .project-library-card { min-height: 314px; display: flex; flex-direction: column; }
   .project-library.is-list .project-library-card :is(.project-library-card__copy,.context-coverage) { margin-block: 15px 0; }
   .project-library.is-list .project-library-card__metrics { margin-block-start: auto; }
-  .project-library.is-list .project-library-card__link { margin: 14px -17px -17px; padding: 11px 17px; border-inline: 0; border-block-end: 0; }
+  /* Full-bleed restored at token scale (universal.css §2b owns geometry). */
+  .project-library.is-list .project-library-card__link { border-inline: 0; border-block-end: 0; }
 
   .project-detail-layout, .run-detail-layout { grid-template-columns: minmax(0,1fr); }
   .project-inspector, .run-inspector { position: static; grid-row: auto; }
@@ -1165,7 +1154,8 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
 .knowledge-collection-card dt { color: var(--u-faint); font-size: var(--u-text-xs); }
 .knowledge-collection-card dd { margin: 1px 0 0; color: var(--u-ink); font: 600 11px "IBM Plex Mono", monospace; }
 .collection-visibility { display: flex; align-items: center; gap: 5px; margin-block-start: 9px; color: var(--u-faint); font-size: var(--u-text-xs); }
-.knowledge-collection-card > a { display: flex; align-items: center; justify-content: space-between; margin: 12px -15px -15px; padding: 10px 15px; border-block-start: 1px solid var(--u-line); color: var(--u-primary); text-decoration: none; font-size: var(--u-text-xs); font-weight: 600; }
+/* Geometry owned by universal.css §2b. */
+.knowledge-collection-card > a { display: flex; align-items: center; justify-content: space-between; border-block-start: 1px solid var(--u-line); color: var(--u-primary); text-decoration: none; font-size: var(--u-text-xs); font-weight: 600; }
 .knowledge-collection-card > a:hover { background: var(--u-surface-subtle); }
 [dir="rtl"] .knowledge-collection-card > a svg { transform: scaleX(-1); }
 .knowledge-sources-panel { margin-block-start: 12px; padding: 16px; border: 1px solid var(--u-line); background: var(--u-surface); }
@@ -1247,7 +1237,8 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
 .catalog-model-card dl > div { min-width: 0; padding: 9px 10px; background: var(--u-surface); }
 .catalog-model-card dt { color: var(--u-faint); font-size: var(--u-text-xs); }
 .catalog-model-card dd { overflow: hidden; margin: 2px 0 0; color: var(--u-ink); text-overflow: ellipsis; white-space: nowrap; font: 600 8px "IBM Plex Mono", monospace; }
-.catalog-model-card > a { display: flex; align-items: center; justify-content: space-between; margin: 12px -15px -15px; padding: 10px 15px; border-block-start: 1px solid var(--u-line); color: var(--u-primary); text-decoration: none; font-size: var(--u-text-xs); font-weight: 600; }
+/* Geometry owned by universal.css §2b. */
+.catalog-model-card > a { display: flex; align-items: center; justify-content: space-between; border-block-start: 1px solid var(--u-line); color: var(--u-primary); text-decoration: none; font-size: var(--u-text-xs); font-weight: 600; }
 [dir="ltr"] .catalog-model-card > a svg { transform: scaleX(-1); }
 .compare-dock { position: sticky; z-index: 12; inset-block-end: 16px; min-height: 62px; display: flex; align-items: center; gap: 14px; max-width: 920px; margin: 18px auto 0; padding: 9px 11px; border: 1px solid var(--u-line-strong); background: var(--u-inverse-surface); box-shadow: var(--u-shadow-md); color: var(--u-on-inverse); }
 .compare-dock > div:first-child { display: flex; align-items: center; gap: 8px; }
@@ -1786,7 +1777,8 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
   border-color: var(--u-primary-soft-line) !important;
   box-shadow: var(--u-shadow-sm);
 }
-.agent-card__actions, .flow-card__footer { margin: 15px -18px -18px; padding: 12px 18px; border-block-start: 1px solid var(--u-line); background: var(--u-tint-1); border-radius: 0 0 18px 18px; }
+/* Paint only — geometry (bleed/padding/radius) owned by universal.css §2b. */
+.agent-card__actions, .flow-card__footer { border-block-start: 1px solid var(--u-line); background: var(--u-tint-1); }
 .agent-avatar { border-radius: var(--u-radius-sm); border: 1px solid var(--u-primary-soft-line); }
 .agent-card__facts { border-block: 1px solid var(--u-line); }
 .flow-card__identity > span, .flow-mini-map > div > span { border-radius: var(--u-radius-sm); }
@@ -1856,7 +1848,7 @@ html[dir="ltr"] .preview-policy dd { margin: 3px 0 0 20px; }
     width: 100%;
     max-height: calc(100dvh - 12px);
     padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
-    border-radius: var(--u-radius-lg) 20px 0 0;
+    border-radius: var(--u-radius-lg) var(--u-radius-lg) 0 0;
   }
   [dir="rtl"] [role="dialog"].form-dialog,
   [dir="rtl"] [role="dialog"].approval-dialog,

@@ -1,0 +1,95 @@
+======= agents-1440 =======
+======= agents-1440 =======
+======= agents-1440 =======
+**Overall Impression:** The UI is clean and well-structured, but suffers from a critical alignment failure in the main content area and inconsistent spacing in the card grid.
+
+*   **Location:** Main Content Area (Filter Bar & List Container)
+    *   **Issue:** Severe horizontal misalignment. The "All" (الكل) filter tab and the search bar are pushed significantly to the left, breaking the visual grid established by the header and cards above/below.
+    *   **Severity:** P1
+*   **Location:** Bottom Card Grid (3 Cards)
+    *   **Issue:** Inconsistent horizontal gaps. The spacing between the first and second card is noticeably wider than the spacing between the second and third card.
+    *   **Severity:** P2
+*   **Location:** Top Stats Row (4 Columns)
+    *   **Issue:** The background highlight on the "Active Models" (نماذج مفعلة) column creates an unbalanced visual weight compared to the other three columns, though the text alignment itself appears correct for RTL.
+    *   **Severity:** P3
+*   **Location:** Sidebar (Right)
+    *   **Issue:** The "Create New Project" (+) button icon and text are slightly off-center vertically relative to the button's padding.
+    *   **Severity:** P3
+
+======= flows-1440 =======
+**Overall Impression:** The interface is clean and well-structured, but suffers from a critical layout misalignment in the stats bar and minor inconsistencies in the card list.
+
+### Visual QA Report
+
+| # | Location | Issue | Severity |
+| :--- | :--- | :--- | :--- |
+| 1 | **Top Stats Bar (الإحصائيات)** | **Critical Misalignment:** The first stat box ("1 مشروع نشط") is significantly taller than the other three boxes, breaking the horizontal grid line. | **P1** |
+| 2 | **Top Stats Bar** | **Inconsistent Backgrounds:** The first stat box has a beige/cream background, while the other three are white/transparent. This creates visual imbalance. | **P2** |
+| 3 | **Project Cards List** | **Inconsistent Tag Colors:** The status tags ("نشط" vs "مُعلّق") use different background colors (Green vs Yellow), which is likely intentional, but the text contrast on the yellow tag appears slightly lower than the green one. | **P3** |
+| 4 | **Sidebar (Right)** | **Icon Alignment:** The icons in the navigation menu (e.g., "الرئيسية", "المشاريع") appear slightly off-center vertically relative to their text labels in some items. | **P3** |
+| 5 | **Header Search Bar** | **Placeholder Alignment:** The search icon inside the main header search bar is not perfectly centered vertically with the placeholder text. | **P3** |
+
+======= models-1440 =======
+**Overall Impression:** The interface is clean and well-structured, but suffers from minor alignment inconsistencies in the card grid and a few typography/contrast nuances that detract from the premium feel.
+
+| Location | Issue | Severity |
+| :--- | :--- | :--- |
+| **Card Grid (Bottom Row)** | The four model cards have inconsistent heights; "Depth Reasoner" and "Clarity Pro" are noticeably taller than "Canvas Vision" and "Sprint Mini" due to varying description lengths, breaking horizontal alignment. | P2 |
+| **Stats Bar (Top)** | The first stat card ("نشط حالياً") has a distinct light-yellow background, while the other three cards are transparent/white, creating an inconsistent visual rhythm for sibling components. | P3 |
+| **Model Cards - Tags** | Inconsistent tag styling: "مناسب" uses a green pill background, while "ممتاز" uses a yellow pill. While likely intentional for status, the visual weight differs significantly across siblings. | P3 |
+| **Model Cards - Footer Actions** | The "View Model Details" link text is not perfectly aligned with the back arrow icon (`<-`) in all cards; specifically in the second card ("Depth Reasoner"), the vertical centering looks slightly off compared to others. | P3 |
+| **Sidebar Navigation** | The active state indicator (green dot) next to "الرئيسية" is not vertically centered with the icon/text baseline; it sits slightly too high. | P3 |
+| **Typography (Subheaders)** | The subtitle text under the main heading ("انقر على القسم...") has ver
+
+======= settings-1440 =======
+**Overall Impression:** The layout is clean and generally well-structured for an RTL interface, but suffers from a critical alignment failure in the main form container and inconsistent spacing in the sidebar.
+
+### Visual QA Report
+
+*   **Location:** Main content area (Profile Settings card)
+    *   **Issue:** **Critical Misalignment.** The form input fields (Name, Email, Phone) are significantly misaligned with the "Avatar Upload" container to their left. The inputs are pushed too far to the right, creating an uneven gutter and breaking the vertical grid rhythm of the card.
+    *   **Severity:** P1
+
+*   **Location:** Right Sidebar (Navigation Menu)
+    *   **Issue:** **Inconsistent Gaps/Spacing.** The vertical spacing (padding/margin) between the list items is uneven. Specifically, the gap between "الإعدادات" (Settings) and "التنبيهات والإشعارات" (Notifications) appears visually larger or looser than the gaps between other adjacent menu items.
+    *   **Severity:** P2
+
+*   **Location:** Top Navigation Bar
+    *   **Issue:** **Alignment/Icon Consistency.** The "KR" language toggle button inside the search bar area appears slightly misaligned vertically compared to the search text and icon, or it lacks sufficient internal padding, making it look cramped compared to the "EN" text button on the left.
+    *   **Severity:** P3
+
+*   **Location:** Main Content Area (Bottom)
+    *   **Issue:** **Button Alignment.** The "حفظ التغييرات" (Save Changes) button is floated to the bottom-le
+
+======= usage-1440 =======
+**Overall Impression:** The UI is generally clean and well-structured, but suffers from minor alignment inconsistencies in the data tables and a few typographic/spacing imbalances in the header area.
+
+**Visual QA Report:**
+
+*   **Location:** Header (Top Bar)
+    *   **Issue:** The search bar placeholder text "ابحث عن نموذج..." is not vertically centered within the input field; it sits slightly too high compared to the search icon.
+    *   **Severity:** P3
+*   **Location:** Stats Cards Row (Top Section)
+    *   **Issue:** The four stat cards have inconsistent internal vertical padding. The text in the "Cost per Word" ($1.75) card appears to have slightly more top padding than the "Total Spend" ($48.20) card.
+    *   **Severity:** P3
+*   **Location:** "Latest Model Runs" Table (Bottom Section)
+    *   **Issue:** Misalignment of column content. The "Status" badges (e.g., "مكتمل التشغيل") are not horizontally centered within their column; they appear left-aligned while the header implies center alignment. Additionally, the "Price" column values ($US) are not aligned with the "Model" names above them.
+    *   **Severity:** P2
+*   **Location:** "Why did spending change?" Chart (Middle Section)
+    *   **Issue:** The Y-axis labels ($1.20, $0.00) are misaligned. The bottom label ($0.00) is positioned slightly lower or has different baseline alignment relative to the X-axis line compared to the top label's relation to the grid line.
+    *   **Severity:** P3
+*   **Location:** Sidebar N
+
+======= knowledge-1440 =======
+**Overall Impression:** The layout is generally clean and well-structured, but suffers from inconsistent vertical alignment in the statistics row and a noticeable visual hierarchy imbalance due to the heavy background color on the first stat card.
+
+### Visual QA Report
+
+| Location | Issue | Severity |
+| :--- | :--- | :--- |
+| **Statistics Row (Top)** | **Vertical Misalignment:** The text content (label and value) inside the first card ("2 مشاريع") is not vertically centered relative to the other three cards. It appears pushed downwards or the container height differs slightly. | P2 |
+| **Statistics Row (First Card)** | **Inconsistent Styling:** The first stat card has a distinct beige background color (`#FFF8E1` approx) while the other three cards are white/transparent. This breaks visual consistency among sibling components of the same type. | P2 |
+| **Project Cards Grid** | **Inconsistent Content Height:** The description text length varies significantly across the four project cards (e.g., "إدارة المواهب" vs "تحليل المنافسين"), causing the cards to have unequal heights and misaligned bottom action areas ("عرض المشروع"). | P3 |
+| **Recent Files Table** | **Alignment Inconsistency:** The file type icons (folder/link icons) in the first column are not perfectly aligned vertically with each other or the text baseline, appearing to float at slightly different heights per row. | P3 |
+| **Sidebar (Right)** | **Icon Alignment:** The active state indicator (green dot next to "نماذج
+
