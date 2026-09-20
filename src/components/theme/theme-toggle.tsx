@@ -45,7 +45,7 @@ const LABELS: Record<Locale, Record<Mode, { current: string; next: string }>> = 
 const emptySubscribe = () => () => {};
 const useIsClient = () => useSyncExternalStore(emptySubscribe, () => true, () => false);
 
-export function ThemeToggle({ locale, className = "universal-theme-toggle" }: { locale: Locale; className?: string }) {
+export function ThemeToggle({ locale, className = "mj-theme-toggle" }: { locale: Locale; className?: string }) {
   const { theme, setTheme } = useTheme();
   const mounted = useIsClient();
 

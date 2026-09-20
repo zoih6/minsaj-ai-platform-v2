@@ -1,15 +1,32 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale } from "@minsaj/i18n";
-import { getAgentData, getOperationsData } from "@/lib/data/operations";
-import { AgentBuilderPrototype } from "@/components/domain/operations/agent-builder-prototype";
+import { getAgentData, getWorkspaceAdminData } from "@/lib/data/operations";
+import { MjAgentBuilder } from "@/components/mj/mj-agents";
 
-export default async function AgentEditPage({ params }: { params: Promise<{ locale: string; agentId: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; agentId: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: locale === "ar" ? "تحرير الوكيل — منسج" : "Edit agent — Minsaj",
+    description: locale === "ar"
+      ? "عدّل التعليمات والحدود؛ الإصدار التالي يُسجَّل عند الحفظ."
+      : "Adjust instructions and limits; the next version is recorded on save.",
+  };
+}
+
+export default async function EditAgentPage({ params }: { params: Promise<{ locale: string; agentId: string }> }) {
   const { locale, agentId } = await params;
   if (!isLocale(locale)) notFound();
-  const [specific, base, operations] = await Promise.all([getAgentData(agentId), getAgentData("agt_market_researcher"), getOperationsData()]);
-  if (!base) notFound();
-  const summary = operations.agents.find((item) => item.id === agentId);
-  const definition = specific ?? (summary ? { ...base, summary, modelPolicy: { ...base.modelPolicy, primary: summary.model } } : null);
+  const definition = await getAgentData(agentId);
   if (!definition) notFound();
-  return <AgentBuilderPrototype locale={locale} initialDefinition={definition} />;
+  const admin = await getWorkspaceAdminData();
+  const models = admin.models.map((m) => ({ name: m.name, provider: m.provider }));
+  return (
+    <MjAgentBuilder
+      locale={locale}
+      definition={definition}
+      models={models}
+      isNew={false}
+    />
+  );
 }

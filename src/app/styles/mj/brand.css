@@ -1,0 +1,45 @@
+/* ============================================================
+   MDS v4 — brand.css
+   Official Minsaj brand marks (identity freeze v2, 2026-09-18).
+   Light surfaces: navy→violet master. Dark: luminance-lifted.
+   data-on-dark forces lifted art on always-dark chrome.
+   ============================================================ */
+
+.minsaj-mark {
+  display: inline-block;
+  background-image: url("/brand/symbols/minsaj-symbol-color.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex: 0 0 auto;
+}
+:root[data-theme="dark"] .minsaj-mark,
+.minsaj-mark[data-on-dark] {
+  background-image: url("/brand/symbols/minsaj-symbol-dark.webp");
+}
+.minsaj-mark[data-on-dark="mono"] {
+  background-image: url("/brand/symbols/minsaj-symbol-mono-white.webp");
+}
+
+.minsaj-logo {
+  display: inline-block;
+  background-image: url("/brand/logos/minsaj-lockup-color.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex: 0 0 auto;
+}
+:root[data-theme="dark"] .minsaj-logo,
+.minsaj-logo[data-on-dark] {
+  background-image: url("/brand/logos/minsaj-lockup-dark.webp");
+}
+
+/* theme toggle (adapted component, mj-styled) */
+.mj-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: var(--r-sm);
+  color: var(--ink-2);
+  transition: background-color var(--dur-press) var(--ease-out), color var(--dur-press) var(--ease-out);
+}
+.mj-theme-toggle:hover { background: var(--hover); color: var(--ink); }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isLocale } from "@minsaj/i18n";
-import { ServiceWorkspace } from "@/components/universal/service-workspace";
+import { Suspense } from "react";
+import { getDictionary, isLocale } from "@minsaj/i18n";
+import { MjChat } from "@/components/mj/mj-chat";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -11,5 +12,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ChatPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-  return <ServiceWorkspace locale={locale} serviceId="ask" />;
+  return (
+    <Suspense fallback={null}>
+      <MjChat locale={locale} dictionary={getDictionary(locale)} />
+    </Suspense>
+  );
 }

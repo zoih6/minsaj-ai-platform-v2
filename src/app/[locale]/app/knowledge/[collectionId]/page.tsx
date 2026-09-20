@@ -1,13 +1,46 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isLocale } from "@minsaj/i18n";
+import { getDictionary, isLocale } from "@minsaj/i18n";
+import type { WorkspaceAdminSnapshot } from "@minsaj/contracts";
 import { getWorkspaceAdminData } from "@/lib/data/operations";
-import { KnowledgeCollectionPrototype } from "@/components/domain/admin/knowledge-prototype";
+import { MjCollectionDetail } from "@/components/mj/mj-collection";
 
-export default async function CollectionPage({ params }: { params: Promise<{ locale: string; collectionId: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: locale === "ar" ? "مجموعة معرفة — منسج" : "Knowledge collection — Minsaj",
+    description: locale === "ar"
+      ? "مصادر المجموعة وحالات الفهرسة."
+      : "The collection’s sources and their indexing status.",
+  };
+}
+
+export default async function CollectionDetailPage({
+  params,
+}: { params: Promise<{ locale: string; collectionId: string }> }) {
   const { locale, collectionId } = await params;
   if (!isLocale(locale)) notFound();
-  const data = await getWorkspaceAdminData();
-  const collection = data.collections.find((item) => item.id === collectionId);
-  if (!collection) notFound();
-  return <KnowledgeCollectionPrototype locale={locale} collection={collection} sources={data.sources.filter((source) => source.collectionId === collectionId)} />;
+  const dictionary = getDictionary(locale);
+
+  let data: WorkspaceAdminSnapshot | null = null;
+  let failed = false;
+  try {
+    data = await getWorkspaceAdminData();
+  } catch {
+    failed = true;
+  }
+
+  const collection = data?.collections.find((c) => c.id === collectionId) ?? null;
+  if (!failed && !collection) notFound();
+  const sources = data && collection ? data.sources.filter((s) => s.collectionId === collectionId) : [];
+
+  return (
+    <MjCollectionDetail
+      locale={locale}
+      dictionary={dictionary}
+      collection={collection}
+      sources={sources}
+      error={failed}
+    />
+  );
 }

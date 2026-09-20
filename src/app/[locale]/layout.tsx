@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
+import "@fontsource/ibm-plex-sans-arabic/400.css";
+import "@fontsource/ibm-plex-sans-arabic/500.css";
+import "@fontsource/ibm-plex-sans-arabic/600.css";
+import "@fontsource/ibm-plex-sans-arabic/700.css";
+import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/500.css";
+import "@fontsource/ibm-plex-sans/600.css";
 import "@fontsource/ibm-plex-mono/400.css";
-import "../globals.css";
-import "../universal.css";
-import "../styles/mids.css";
+import "@fontsource/ibm-plex-mono/500.css";
+/* MDS v4 — «النسيج» design system (design/DESIGN.md is the constitution) */
+import "../styles/mj/tokens.css";
+import "../styles/mj/base.css";
+import "../styles/mj/components.css";
+import "../styles/mj/shell.css";
+import "../styles/mj/brand.css";
 import { getDictionary, getDirection, isLocale, locales } from "@minsaj/i18n";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
@@ -40,7 +47,7 @@ export default async function LocaleLayout({ children, params }: Readonly<{ chil
   if (!isLocale(locale)) notFound();
 
   return (
-    <html lang={locale} dir={getDirection(locale)} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang={locale} dir={getDirection(locale)} suppressHydrationWarning>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

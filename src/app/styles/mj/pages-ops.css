@@ -1,0 +1,191 @@
+/* ============================================================
+   MDS v4 — pages-ops.css
+   Operations pages (projects / agents / flows / runs): timeline,
+   flow node canvas, run rows, builder columns. Tokens only.
+   ============================================================ */
+
+/* ============================================================
+   RUN ROW — title + status line + progress + cost
+   ============================================================ */
+.mj-run-row {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  min-width: 0;
+  transition: border-color var(--dur-state) var(--ease), background-color var(--dur-state) var(--ease);
+}
+a.mj-run-row:hover, a.mj-run-row:focus-visible {
+  border-color: var(--line-strong);
+  background: var(--hover);
+}
+.mj-run-row__top {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-width: 0;
+}
+.mj-run-row__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.mj-run-row__bottom {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-width: 0;
+}
+.mj-run-row__bottom .mj-progress { flex: 1 1 auto; min-width: 0; }
+
+/* ============================================================
+   TIMELINE — run steps + flow node chain (one system, the thread)
+   item = marker column + body column; connector = ::after
+   ============================================================ */
+.mj-tl { display: grid; min-width: 0; }
+.mj-tl__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: var(--s-3);
+  padding-block-end: var(--s-4);
+  min-width: 0;
+}
+.mj-tl__item:last-child { padding-block-end: 0; }
+.mj-tl__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 42px;
+  inset-block-end: 2px;
+  inset-inline-start: 17px;
+  inline-size: 2px;
+  border-radius: 1px;
+  background: var(--line-strong);
+}
+.mj-tl__mark {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-content: center;
+  background: var(--well);
+  border: 1px solid var(--line-strong);
+  color: var(--ink-2);
+  position: relative;
+  z-index: var(--z-content);
+  flex: none;
+}
+.mj-tl__mark[data-tone="success"] {
+  color: var(--success);
+  border-color: color-mix(in srgb, var(--success) 32%, var(--line-strong));
+  background: color-mix(in srgb, var(--success) 9%, var(--surface));
+}
+.mj-tl__mark[data-tone="warning"] {
+  color: var(--warning);
+  border-color: color-mix(in srgb, var(--warning) 32%, var(--line-strong));
+  background: color-mix(in srgb, var(--warning) 9%, var(--surface));
+}
+.mj-tl__mark[data-tone="danger"] {
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 32%, var(--line-strong));
+  background: color-mix(in srgb, var(--danger) 9%, var(--surface));
+}
+.mj-tl__mark[data-pulse="true"] { animation: mj-pulse 1.6s var(--ease) infinite; }
+.mj-tl__body {
+  display: grid;
+  gap: var(--s-2);
+  align-content: start;
+  align-items: start;
+  min-width: 0;
+}
+
+/* ============================================================
+   FLOW NODE — selectable card inside the canvas timeline
+   ============================================================ */
+.mj-node {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  width: 100%;
+  min-height: 48px;
+  padding: var(--s-3);
+  text-align: start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  min-width: 0;
+  transition: border-color var(--dur-state) var(--ease), background-color var(--dur-state) var(--ease);
+}
+.mj-node:hover { border-color: var(--line-strong); background: var(--hover); }
+.mj-node[aria-current="true"] {
+  border-color: var(--accent-line);
+  background: var(--accent-wash);
+}
+.mj-node__id {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+.mj-node__type {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-caption);
+  color: var(--ink-3);
+  font-weight: var(--fw-label);
+}
+
+/* ============================================================
+   TWO-COLUMN WORK SURFACES — builder (agent) + editor (flow)
+   ============================================================ */
+.mj-cols {
+  display: grid;
+  gap: var(--s-5);
+  align-items: start;
+  min-width: 0;
+}
+@media (min-width: 1024px) {
+  .mj-cols--split { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
+}
+
+/* ============================================================
+   TOOL ROW — checkbox + name + risk badge (inside a card body)
+   ============================================================ */
+.mj-tool-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3) 0;
+  border-block-end: 1px solid var(--line);
+  min-width: 0;
+}
+.mj-tool-row:first-child { padding-block-start: 0; }
+.mj-tool-row:last-child { border-block-end: 0; padding-block-end: 0; }
+.mj-tool-row__id { display: grid; gap: 2px; min-width: 0; flex: 1; }
+
+/* small stacked label+control group (budget input + currency) */
+.mj-money-input {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.mj-money-input .mj-input { flex: 1 1 auto; min-width: 0; }
+
+/* ============================================================
+   LIGHT-THEME STATUS BADGES — measured contrast correction
+   The shared 14% status tint under status text fails AA in
+   light theme (success 4.35:1 on surface / 4.04:1 on canvas;
+   danger 4.25:1 on canvas / 4.07:1 on hovered rows). Deepening
+   the badge ink toward --ink holds every pair ≥ 5.7:1 across
+   all light surfaces (surface/canvas/well/hover). Dark theme
+   untouched (all pairs 7:1+). Scoped here because the shared
+   component layer is frozen; root pair lives in components.css.
+   ============================================================ */
+[data-theme="light"] .mj-badge--success { color: color-mix(in srgb, var(--success) 68%, var(--ink)); }
+[data-theme="light"] .mj-badge--warning { color: color-mix(in srgb, var(--warning) 68%, var(--ink)); }
+[data-theme="light"] .mj-badge--danger  { color: color-mix(in srgb, var(--danger) 68%, var(--ink)); }

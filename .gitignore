@@ -59,4 +59,10 @@ server.log
 scripts/.deploy.env
 tool-results/
 /audit/
-/research/
+/research/open-design/
+devd.pid
+skills-ui-design-system/
+
+# research reference clones (not part of product)
+/open-design/
+/skills-ui-design-system/

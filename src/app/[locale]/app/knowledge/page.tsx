@@ -1,11 +1,43 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isLocale } from "@minsaj/i18n";
+import { getDictionary, isLocale } from "@minsaj/i18n";
+import type { WorkspaceAdminSnapshot } from "@minsaj/contracts";
 import { getWorkspaceAdminData } from "@/lib/data/operations";
-import { KnowledgePrototype } from "@/components/domain/admin/knowledge-prototype";
+import { MjKnowledge } from "@/components/mj/mj-knowledge";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: locale === "ar" ? "المعرفة — منسج" : "Knowledge — Minsaj",
+    description: locale === "ar"
+      ? "مجموعات المعرفة المفهرسة التي تستند إليها الوكلاء والتدفقات."
+      : "Indexed knowledge collections your agents and flows draw on.",
+  };
+}
 
 export default async function KnowledgePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-  const data = await getWorkspaceAdminData();
-  return <KnowledgePrototype locale={locale} initialCollections={data.collections} initialSources={data.sources} />;
+  const dictionary = getDictionary(locale);
+
+  let data: WorkspaceAdminSnapshot | null = null;
+  let failed = false;
+  try {
+    data = await getWorkspaceAdminData();
+  } catch {
+    failed = true;
+  }
+
+  if (failed || !data) {
+    return <MjKnowledge locale={locale} dictionary={dictionary} collections={[]} sources={[]} error />;
+  }
+
+  return (
+    <MjKnowledge
+      locale={locale}
+      dictionary={dictionary}
+      collections={data.collections}
+      sources={data.sources}
+    />
+  );
 }
