@@ -21,7 +21,11 @@ export default async function RoutingPage({ params }: { params: Promise<{ locale
   const dictionary = getDictionary(locale);
 
   let data: WorkspaceAdminSnapshot | null = null;
-  let policy = { primary: "Clarity Pro", fallback: "Sprint Mini", payer: "platform_credits" as const };
+  let policy: { primary: string; fallback: string; payer: "platform_credits" | "byok" } = {
+    primary: "Clarity Pro",
+    fallback: "Sprint Mini",
+    payer: "platform_credits",
+  };
   let failed = false;
   try {
     const [admin, agent] = await Promise.all([getWorkspaceAdminData(), getAgentData("agt_market_researcher")]);
