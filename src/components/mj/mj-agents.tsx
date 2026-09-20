@@ -190,7 +190,7 @@ function AgentBuilderInner({
   const objectiveError = touched.objective && objective.trim().length < 10 ? t.errObjective : undefined;
   const instructionsError = touched.instructions && instructions.trim().length < 20 ? t.errInstructions : undefined;
   const budgetValue = Number(budget);
-  const budgetError = touched.budget && (!(budgetValue > 0) ? t.errBudget : undefined);
+  const budgetError = touched.budget && !(budgetValue > 0) ? t.errBudget : undefined;
 
   const enabledTools = tools.filter((tool) => tool.enabled);
   const riskyTools = enabledTools.filter((tool) => tool.risk !== "read");

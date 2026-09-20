@@ -234,8 +234,8 @@ export function Segmented({
 /* ------------------------------------------------------------------
    Loading primitives
    ------------------------------------------------------------------ */
-export function Skeleton({ className }: { className?: string }) {
-  return <div className={cn("mj-skel", className)} aria-hidden />;
+export function Skeleton({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  return <div className={cn("mj-skel", className)} style={style} aria-hidden />;
 }
 
 export function Spinner({ size = "md" }: { size?: "sm" | "md" }) {

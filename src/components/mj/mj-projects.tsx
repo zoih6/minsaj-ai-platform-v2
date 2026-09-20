@@ -123,7 +123,7 @@ function ProjectsInner({
           ) : (
             <div className="mj-grid mj-grid--cards">
               {filtered.map((p) => (
-                <ProjectCard key={p.id} locale={locale} project={p} labels={t} dictionary={dictionary} />
+                <ProjectCard key={p.id} locale={locale} project={p} labels={t} />
               ))}
             </div>
           )}
