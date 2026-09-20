@@ -111,6 +111,23 @@ export function MjChat({ locale, dictionary }: { locale: Locale; dictionary: Dic
             <span className="mj-skel" style={{ width: 120, height: 14 }} />
           </div>
         ) : null}
+
+        {/* short-conversation state: real starting points fill the open space */}
+        {messages.length <= 2 && !sending ? (
+          <div className="mj-chat__seed">
+            <p className="mj-caption">{isAr ? "ابدأ من هنا" : "Start here"}</p>
+            <div className="mj-chat__seed-row">
+              {(isAr
+                ? ["لخّص مستندًا طويلًا في عشر نقاط تنفيذية", "قارن نموذجين لترجمة تقارير المبيعات", "استخرج المهام والمسؤوليات من محضر اجتماع"]
+                : ["Summarize a long document into ten executive points", "Compare two models for translating sales reports", "Extract owners and tasks from meeting minutes"]
+              ).map((seed) => (
+                <button key={seed} type="button" className="mj-chat__seed-chip" onClick={() => setDraft(seed)}>
+                  {seed}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
 
       {/* jump to latest */}

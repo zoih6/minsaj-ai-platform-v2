@@ -84,18 +84,21 @@
 
 @keyframes mj-spin { to { transform: rotate(360deg); } }
 
-/* icon button */
+/* icon button — 40px base, 44px on coarse pointers (WCAG 2.5.8 / HIG) */
 .mj-icon-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px; height: 36px;
+  width: 40px; height: 40px;
   border-radius: var(--r-sm);
   color: var(--ink-2);
   transition: background-color var(--dur-press) var(--ease-out), color var(--dur-press) var(--ease-out);
 }
 .mj-icon-btn:hover { background: var(--hover); color: var(--ink); }
-.mj-icon-btn--sm { width: 30px; height: 30px; }
+.mj-icon-btn--sm { width: 36px; height: 36px; }
+@media (pointer: coarse) {
+  .mj-icon-btn, .mj-icon-btn--sm { width: 44px; height: 44px; }
+}
 .mj-icon-btn[disabled] { opacity: 0.42; pointer-events: none; }
 
 /* keyboard hint */
@@ -655,7 +658,8 @@ a.mj-list-row:hover, button.mj-list-row:hover { border-color: var(--line-strong)
 }
 [data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; }
 
-/* chat bubbles */
+/* chat bubbles — the AI reply is the product's value: it gets the wider
+   measure and the raised surface; the user prompt is quieter (tinted). */
 .mj-bubble {
   max-width: min(72ch, 88%);
   padding: var(--s-3) var(--s-4);
@@ -665,13 +669,16 @@ a.mj-list-row:hover, button.mj-list-row:hover { border-color: var(--line-strong)
 }
 .mj-bubble--user {
   margin-inline-start: auto;
-  background: var(--accent-fill);
-  color: #FFFFFF;
+  max-width: min(64ch, 92%);
+  background: var(--accent-wash);
+  color: var(--ink);
+  border: 1px solid var(--accent-line);
   border-end-end-radius: var(--r-sm);
 }
 .mj-bubble--ai {
-  background: var(--surface);
-  border: 1px solid var(--line);
+  max-width: min(88ch, 100%);
+  background: var(--raised);
+  border: 1px solid var(--line-strong);
   border-end-start-radius: var(--r-sm);
 }
 .mj-bubble--meta { font-size: var(--fs-caption); color: var(--ink-3); display: flex; gap: var(--s-2); align-items: center; margin-block-start: var(--s-2); }

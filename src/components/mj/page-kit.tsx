@@ -7,6 +7,7 @@
    ============================================================ */
 
 import type { ReactNode } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { cn } from "@minsaj/ui";
 
@@ -95,12 +96,23 @@ export function MoneyView({ amountMinor, currency, locale }: { amountMinor: numb
 }
 
 export function TimeAgo({ iso, locale, labels }: { iso: string; locale: string; labels: { now: string; min: string; hour: string; day: string } }) {
-  const diffMs = Date.now() - new Date(iso).getTime();
-  const mins = Math.max(1, Math.round(diffMs / 60000));
-  const text =
-    mins < 2 ? labels.now :
-    mins < 60 ? `${mins} ${labels.min}` :
-    mins < 1440 ? `${Math.round(mins / 60)} ${labels.hour}` :
-    `${Math.round(mins / 1440)} ${labels.day}`;
-  return <span className="mj-caption">{text}</span>;
+  // Relative timestamps differ between SSR/prerender time and hydration time.
+  // Documented React pattern for time-dependent text: compute during render,
+  // suppress the hydration warning on the leaf, then keep it live on the client.
+  const compute = () => {
+    const diffMs = Date.now() - new Date(iso).getTime();
+    const mins = Math.max(1, Math.round(diffMs / 60000));
+    return mins < 2 ? labels.now :
+      mins < 60 ? `${mins} ${labels.min}` :
+      mins < 1440 ? `${Math.round(mins / 60)} ${labels.hour}` :
+      `${Math.round(mins / 1440)} ${labels.day}`;
+  };
+  const [text, setText] = useState<string>(compute);
+  useEffect(() => {
+    setText(compute());
+    const id = window.setInterval(() => setText(compute()), 30_000);
+    return () => window.clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [iso]);
+  return <span className="mj-caption" suppressHydrationWarning>{text}</span>;
 }

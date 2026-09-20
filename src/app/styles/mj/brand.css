@@ -43,3 +43,16 @@
   transition: background-color var(--dur-press) var(--ease-out), color var(--dur-press) var(--ease-out);
 }
 .mj-theme-toggle:hover { background: var(--hover); color: var(--ink); }
+
+/* ---------- coarse-pointer (touch) target sizing — design-visual-frontend Gate G
+   Every interactive element reaches a >=44px hit area on touch; fine-pointer
+   (mouse) keeps the compact 36-40px rhythm. Lives in brand.css (last sheet)
+   so it cannot be overridden by base definitions in earlier sheets. ---------- */
+@media (pointer: coarse) {
+  .mj-btn, .mj-btn--sm { min-height: 44px; }
+  .mj-theme-toggle { width: 44px; height: 44px; }
+  .mj-bottom-nav a, .mj-bottom-nav button { min-height: 48px; }
+  .mj-section-head a, .mj-section-head .mj-link { padding-block: 12px; margin-block: -12px; }
+  .mj-chat__seed-chip { min-height: 48px; }
+  .mj-skip-link { min-height: 44px; }
+}

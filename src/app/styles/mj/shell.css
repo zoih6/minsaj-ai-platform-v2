@@ -428,3 +428,30 @@ body[data-lock="true"] { overflow: hidden; }
   .mj-modelpick__word, .mj-modelpick__prov { display: none; }
   .mj-modelpick { padding-inline: 8px; }
 }
+
+/* short-conversation seeds — fill the open space under a young thread
+   with real starting points instead of dead emptiness */
+.mj-chat__seed {
+  display: grid;
+  justify-items: center;
+  gap: var(--s-3);
+  padding-block: var(--s-8) var(--s-4);
+  margin-block-start: var(--s-4);
+  max-width: 64ch;
+  margin-inline: auto;
+  text-align: center;
+}
+.mj-chat__seed-row { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2); }
+.mj-chat__seed-chip {
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body);
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 9px var(--s-4);
+  min-height: 44px;
+  transition: border-color var(--dur-state) var(--ease), color var(--dur-state) var(--ease), background-color var(--dur-state) var(--ease);
+}
+.mj-chat__seed-chip:hover { color: var(--ink); border-color: var(--accent-line); background: var(--accent-wash); }
+.mj-chat__seed-chip:focus-visible { outline: 2px solid var(--accent-line); outline-offset: 2px; }

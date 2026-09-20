@@ -177,3 +177,10 @@
     transparent
   );
 }
+
+/* ---------- wide-screen progression (design-visual-frontend Gate C)
+   Content columns grow with the viewport instead of stranding as fixed
+   islands: 1160 base → 1320 @1536 → 1440 @1920 → 1560 @2560. */
+@media (min-width: 1536px) { :root { --container: 1320px; } }
+@media (min-width: 1920px) { :root { --container: 1440px; } }
+@media (min-width: 2560px) { :root { --container: 1560px; } }

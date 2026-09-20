@@ -1,0 +1,482 @@
+{
+ "w2560__landing": {
+  "vw": 2560,
+  "containers": [
+   {
+    "cls": "mj-marketing-main",
+    "w": 2560,
+    "left": 0,
+    "right": 2560
+   }
+  ],
+  "bubbles": [],
+  "textSample": [
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "كيف يعمل",
+    "color": "rgb(75, 86, 122)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 1622,
+  "maxContentBottom": 1622
+ },
+ "w2560__home": {
+  "vw": 2560,
+  "containers": [
+   {
+    "cls": "mj-shell",
+    "w": 2560,
+    "left": 0,
+    "right": 2560
+   },
+   {
+    "cls": "mj-main",
+    "w": 2312,
+    "left": 0,
+    "right": 2312
+   },
+   {
+    "cls": "",
+    "w": 2312,
+    "left": 0,
+    "right": 2312
+   },
+   {
+    "cls": "mj-page",
+    "w": 1160,
+    "left": 576,
+    "right": 1736
+   },
+   {
+    "cls": "mj-page-header",
+    "w": 1096,
+    "left": 608,
+    "right": 1704
+   },
+   {
+    "cls": "mj-page-header__row",
+    "w": 1096,
+    "left": 608,
+    "right": 1704
+   },
+   {
+    "cls": "mj-page-header__desc",
+    "w": 385,
+    "left": 1319,
+    "right": 1704
+   },
+   {
+    "cls": "mj-page-header__actions",
+    "w": 370,
+    "left": 608,
+    "right": 978
+   }
+  ],
+  "bubbles": [],
+  "textSample": [
+   {
+    "txt": "انتقل إلى المحتوى",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "ابدأ محادثة",
+    "color": "rgb(255, 255, 255)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 1370,
+  "maxContentBottom": 1370
+ },
+ "w2560__chat": {
+  "vw": 2560,
+  "containers": [
+   {
+    "cls": "mj-shell",
+    "w": 2560,
+    "left": 0,
+    "right": 2560
+   },
+   {
+    "cls": "mj-main",
+    "w": 2312,
+    "left": 0,
+    "right": 2312
+   },
+   {
+    "cls": "",
+    "w": 2312,
+    "left": 0,
+    "right": 2312
+   }
+  ],
+  "bubbles": [
+   {
+    "cls": "mj-bubble mj-bubble--user",
+    "w": 454
+   },
+   {
+    "cls": "mj-bubble mj-bubble--ai",
+    "w": 576
+   },
+   {
+    "cls": "mj-bubble--meta",
+    "w": 542
+   }
+  ],
+  "textSample": [
+   {
+    "txt": "انتقل إلى المحتوى",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "ابدأ محادثة",
+    "color": "rgb(255, 255, 255)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 1080,
+  "maxContentBottom": 1068
+ },
+ "d1440__landing": {
+  "vw": 1440,
+  "containers": [
+   {
+    "cls": "mj-marketing-main",
+    "w": 1440,
+    "left": 0,
+    "right": 1440
+   }
+  ],
+  "bubbles": [],
+  "textSample": [
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "كيف يعمل",
+    "color": "rgb(75, 86, 122)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 1622,
+  "maxContentBottom": 1622
+ },
+ "d1440__home": {
+  "vw": 1440,
+  "containers": [
+   {
+    "cls": "mj-shell",
+    "w": 1440,
+    "left": 0,
+    "right": 1440
+   },
+   {
+    "cls": "mj-main",
+    "w": 1192,
+    "left": 0,
+    "right": 1192
+   },
+   {
+    "cls": "",
+    "w": 1192,
+    "left": 0,
+    "right": 1192
+   },
+   {
+    "cls": "mj-page",
+    "w": 1160,
+    "left": 16,
+    "right": 1176
+   },
+   {
+    "cls": "mj-page-header",
+    "w": 1096,
+    "left": 48,
+    "right": 1144
+   },
+   {
+    "cls": "mj-page-header__row",
+    "w": 1096,
+    "left": 48,
+    "right": 1144
+   },
+   {
+    "cls": "mj-page-header__desc",
+    "w": 385,
+    "left": 759,
+    "right": 1144
+   },
+   {
+    "cls": "mj-page-header__actions",
+    "w": 370,
+    "left": 48,
+    "right": 418
+   }
+  ],
+  "bubbles": [],
+  "textSample": [
+   {
+    "txt": "انتقل إلى المحتوى",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "ابدأ محادثة",
+    "color": "rgb(255, 255, 255)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 1370,
+  "maxContentBottom": 1370
+ },
+ "d1440__chat": {
+  "vw": 1440,
+  "containers": [
+   {
+    "cls": "mj-shell",
+    "w": 1440,
+    "left": 0,
+    "right": 1440
+   },
+   {
+    "cls": "mj-main",
+    "w": 1192,
+    "left": 0,
+    "right": 1192
+   },
+   {
+    "cls": "",
+    "w": 1192,
+    "left": 0,
+    "right": 1192
+   }
+  ],
+  "bubbles": [
+   {
+    "cls": "mj-bubble mj-bubble--user",
+    "w": 454
+   },
+   {
+    "cls": "mj-bubble mj-bubble--ai",
+    "w": 576
+   },
+   {
+    "cls": "mj-bubble--meta",
+    "w": 542
+   }
+  ],
+  "textSample": [
+   {
+    "txt": "انتقل إلى المحتوى",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "ابدأ محادثة",
+    "color": "rgb(255, 255, 255)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 900,
+  "maxContentBottom": 895
+ },
+ "m390__landing": {
+  "vw": 390,
+  "containers": [
+   {
+    "cls": "mj-marketing-main",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   }
+  ],
+  "bubbles": [],
+  "textSample": [
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "منسج",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "EN",
+    "color": "rgb(75, 86, 122)",
+    "size": "12px"
+   }
+  ],
+  "scrollHeight": 2385,
+  "maxContentBottom": 2385
+ },
+ "m390__home": {
+  "vw": 390,
+  "containers": [
+   {
+    "cls": "mj-shell",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   },
+   {
+    "cls": "mj-main",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   },
+   {
+    "cls": "",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   },
+   {
+    "cls": "mj-page",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   },
+   {
+    "cls": "mj-page-header",
+    "w": 358,
+    "left": 16,
+    "right": 374
+   },
+   {
+    "cls": "mj-page-header__row",
+    "w": 358,
+    "left": 16,
+    "right": 374
+   },
+   {
+    "cls": "mj-page-header__desc",
+    "w": 358,
+    "left": 16,
+    "right": 374
+   },
+   {
+    "cls": "mj-page-header__actions",
+    "w": 358,
+    "left": 16,
+    "right": 374
+   }
+  ],
+  "bubbles": [],
+  "textSample": [
+   {
+    "txt": "انتقل إلى المحتوى",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "الأساس",
+    "color": "rgb(93, 104, 144)",
+    "size": "12px"
+   },
+   {
+    "txt": "الرئيسية",
+    "color": "rgb(20, 27, 54)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 2065,
+  "maxContentBottom": 2001
+ },
+ "m390__chat": {
+  "vw": 390,
+  "containers": [
+   {
+    "cls": "mj-shell",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   },
+   {
+    "cls": "mj-main",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   },
+   {
+    "cls": "",
+    "w": 390,
+    "left": 0,
+    "right": 390
+   }
+  ],
+  "bubbles": [
+   {
+    "cls": "mj-bubble mj-bubble--user",
+    "w": 315
+   },
+   {
+    "cls": "mj-bubble mj-bubble--ai",
+    "w": 314
+   },
+   {
+    "cls": "mj-bubble--meta",
+    "w": 280
+   }
+  ],
+  "textSample": [
+   {
+    "txt": "انتقل إلى المحتوى",
+    "color": "rgb(20, 27, 54)",
+    "size": "14px"
+   },
+   {
+    "txt": "الأساس",
+    "color": "rgb(93, 104, 144)",
+    "size": "12px"
+   },
+   {
+    "txt": "الرئيسية",
+    "color": "rgb(75, 86, 122)",
+    "size": "13px"
+   }
+  ],
+  "scrollHeight": 844,
+  "maxContentBottom": 837
+ }
+}
